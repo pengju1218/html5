@@ -1,0 +1,64 @@
+ #yuanjiao{
+	 margin-left:5%;
+ font-family: Arial;
+ border: 1px solid #379082;
+ border-radius: 1rem;
+ height:auto;
+ width: 90%;
+ } 
+ 
+ .cny{
+ margin-top:0.2rem;
+ margin-left:5%;
+ font-family: Arial;
+ border: 1px solid #379082;
+ border-radius: 1rem;
+ height:4rem;
+ width: 90%;
+ text-align:center;
+   -webkit-box-orient:horizontal;
+display: -webkit-box;
+-webkit-box-align: center;
+ }
+ 
+  .cny img{
+	  width:1rem;
+	  height:1rem;
+	   margin-left:1rem;
+	  -webkit-box-flex: 1;
+  }
+    .title{
+	-webkit-box-flex: 4;
+	}
+	
+	
+	.number{
+		-webkit-box-flex: 0.3;
+		
+	}
+	
+table
+  {
+	   margin-top:0.2rem;
+	   margin-left:5%;
+	  width:90%;
+  border-collapse:collapse;
+  }
+   td, th{
+	   text-align:center;
+	   
+	   height:2.9rem;
+	   width:22.4%;
+   }
+
+table, td, th
+  {
+
+  border:1px solid #379082;
+  }
+	
+	
+	
+	
+	
+	
