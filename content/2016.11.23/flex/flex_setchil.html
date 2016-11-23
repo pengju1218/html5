@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>交叉轴对齐方式</title>
+    <link rel="stylesheet" href="css/flex.css">
+    <style type="text/css">
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ddd;
+        }
+        .item {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>子元素平分空间</h2>
+    <div class="box" flex="box:mean">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+    <h2>第一个子元素不要多余空间，其他子元素平分多余空间</h2>
+    <div class="box" flex="box:first">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+    <h2>最后一个子元素不要多余空间，其他子元素平分多余空间</h2>
+    <div class="box" flex="box:last">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+    <h2>两端第一个元素不要多余空间，其他子元素平分多余空间</h2>
+    <div class="box" flex="box:justify">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+</body>
+
+</html>

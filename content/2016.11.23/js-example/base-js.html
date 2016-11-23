@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+</head>
+
+<body>
+<script type="text/javascript">
+
+
+console.log(false.toString()); // 'false'
+console.log([1, 2, 3].toString()); // '1,2,3'
+
+function Foo(){}
+Foo.bar = 1;
+console.log(Foo.bar); // 1
+
+
+
+console.log(2..toString()); // 第二个点号可以正常解析
+console.log(2 .toString()); // 注意点号前面的空格
+console.log((2).toString()); // 2先被计算
+//2.toString();
+
+
+
+
+//访问属性
+//有两种方式来访问对象的属性，点操作符或者中括号操作符。
+var foo = {name: 'kitten'}
+console.log(foo.name); // kitten
+console.log(foo['name']); // kitten
+
+var get = 'name';
+console.log(foo[get]); // kitten
+
+//console.log(foo.1234); // SyntaxError
+console.log(foo['1234']); // works
+
+
+
+
+
+
+
+
+
+
+
+//删除属性
+var obj = {
+    bar: 1,
+    foo: 2,
+    baz: 3
+};
+obj.bar = undefined;
+obj.foo = null;
+delete obj.baz;
+
+for(var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+        console.log(i, '' + obj[i]);
+    }
+}
+
+
+
+//闭包
+function Counter(start) {
+    var count = start;
+    return {
+        increment: function() {
+            count++;
+        },
+
+        get: function() {
+            return count;
+        }
+    }
+}
+
+var foo = Counter(4);
+foo.increment();
+alert(foo.get()); // 5
+
+</script>
+</body>
+
+</html>

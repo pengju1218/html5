@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>交叉轴对齐方式</title>
+    <link rel="stylesheet" href="css/flex.css">
+    <style type="text/css">
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ddd;
+        }
+        .item {
+            width: 30px;
+            /*height: 30px;*/
+            line-height: 30px;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>从上到下（默认）</h2>
+    <div class="box" flex="cross:top">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+    <h2>从下到上</h2>
+    <div class="box" flex="cross:bottom">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+    <h2>基线对齐</h2>
+    <div class="box" flex="cross:baseline">
+        <div class="item" style="font-size: 30px; background: red;">1</div>
+        <div class="item" style="font-size: 12px; background: blue;">2</div>
+        <div class="item" style="font-size: 40px; background: #000;">3</div>
+    </div>
+    <h2>居中对齐</h2>
+    <div class="box" flex="cross:center">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+    <h2>高度并排铺满</h2>
+    <div class="box" flex="cross:stretch">
+        <div class="item" style="background: red;">1</div>
+        <div class="item" style="background: blue;">2</div>
+        <div class="item" style="background: #000;">3</div>
+    </div>
+</body>
+
+</html>
