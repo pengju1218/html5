@@ -1,0 +1,108 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Vonic</title>
+  <link rel="stylesheet" href="css/font.css">
+  <!-- Google Fonts -->
+<link rel="stylesheet" href="https://wangdahoo.github.io/vonic/docs/ionic/css/ionic.css">
+  <script type="text/javascript"   src="js/axios.min.js"></script>
+  <script type="text/javascript"  src="js/vue.min.js"></script>
+  <script  type="text/javascript"  src="js/vue-router.min.js"></script>
+  <script type="text/javascript"   src="js/vonic.min.js"></script>
+  <script type="text/javascript" src="js/babel.js"></script>
+	    
+
+    
+  
+    
+ 
+ 
+  
+</head>
+<body font="pingfang">
+<!--<von-app></von-app>-->
+
+  
+
+  
+  
+  <von-app></von-app>
+  
+  
+ 
+  <script type="text/babel">
+  
+  
+const App = {
+	template: `
+  	<div class="page has-navbar" v-nav="{'title': '搜索框'}">
+      <div class="page-content padding padding-top">
+      
+		<div>
+    <search 
+      :value.sync="keywords" 
+      placeholder="输入关键字" 
+      :on-search="onSearch" 
+      :clear-search="clearSearch"
+    ></search>
+
+    <div class="item" v-show="searching">
+      searching for '{{keywords}}'.
+    </div>
+  </div>
+		
+      </div>
+    </div>
+  `,
+  
+  methods: {
+  	onClick() {
+    	$toast.show("button clicked.")
+    }
+  }
+}
+
+const routes = {
+	'/': {
+  	component: App
+  }
+}
+
+Vue.use(Vonic.app, {
+	routes: routes,
+  defaultRouterUrl: '/'
+})
+
+</script>
+  
+  
+  <script>
+  export default{
+    data(){
+      return {
+        keywords: '',
+        searching: false
+      }
+    },
+    methods: {
+      onSearch(keywords) {
+        this.searching = true;
+      },
+      clearSearch() {
+        this.searching = false;
+        this.keywords = ''
+      }
+    }
+  }
+</script>
+
+  
+
+
+</body>
+</html>

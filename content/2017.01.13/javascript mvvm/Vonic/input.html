@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Vonic</title>
+  <link rel="stylesheet" href="css/font.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="css/ionic.css">
+  <script type="text/javascript"   src="js/axios.min.js"></script>
+  <script type="text/javascript"  src="js/vue.min.js"></script>
+  <script  type="text/javascript"  src="js/vue-router.min.js"></script>
+  <script type="text/javascript"   src="js/vonic.min.js"></script>
+  <script type="text/javascript" src="js/babel.js"></script>
+	    
+
+    
+  
+    
+ 
+ 
+  
+</head>
+<body font="pingfang">
+<!--<von-app></von-app>-->
+
+  
+
+  
+  
+  <von-app></von-app>
+  
+  
+  
+  
+  
+  <script type="text/babel">
+const App = {
+	template: `
+  	<div class="page has-navbar" v-nav="{'title': '输入框'}">
+      <div class="page-content padding padding-top">
+      
+		<von-input 
+  type="text" 
+  :value.sync="username" 
+  label="用户名"
+  placeholder="用户名/手机/邮箱" 
+>
+</von-input>
+		
+		
+      </div>
+    </div>
+  `,
+  
+  methods: {
+  	onClick() {
+    	$toast.show("button clicked.")
+    }
+  }
+}
+
+const routes = {
+	'/': {
+  	component: App
+  }
+}
+
+Vue.use(Vonic.app, {
+	routes: routes,
+  defaultRouterUrl: '/'
+})
+
+</script>
+  
+
+  
+
+
+</body>
+</html>

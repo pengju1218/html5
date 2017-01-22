@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Vonic</title>
+  <link rel="stylesheet" href="css/font.css">
+  <!-- Google Fonts -->
+<link rel="stylesheet" href="https://wangdahoo.github.io/vonic/docs/ionic/css/ionic.css">
+  <script type="text/javascript"   src="js/axios.min.js"></script>
+  <script type="text/javascript"  src="js/vue.min.js"></script>
+  <script  type="text/javascript"  src="js/vue-router.min.js"></script>
+  <script type="text/javascript"   src="js/vonic.min.js"></script>
+  <script type="text/javascript" src="js/babel.js"></script>
+	    
+
+    
+  
+    
+  <style lang="scss" scoped>
+</style>
+ 
+  
+</head>
+<body font="pingfang">
+<!--<von-app></von-app>-->
+
+  
+
+  
+  
+  <von-app></von-app>
+  
+  
+
+<script>
+  export default{
+    data(){
+      return {
+        chosenTopics: [],
+        topics: ["娱乐", "电影", "减肥", "搞笑", "科技"]
+      }
+    }
+  }
+</script>
+  
+  <script type="text/babel">
+const App = {
+	template: `
+  	<div class="page has-navbar" v-nav="{title: '复选框', showBackButton: true}">
+
+    <div class="page-content">
+      <div class="item item-divider">
+        选择感兴趣的板块:
+      </div>
+
+      <von-checkbox :options="topics" :value.sync="chosenTopics" theme="positive"></von-checkbox>
+
+      <p class="padding">
+        chosen topics: {{ chosenTopics }}
+      </p>
+    </div>
+  </div>
+  `,
+  
+  methods: {
+  	onClick() {
+    	$toast.show("button clicked.")
+    }
+  }
+}
+
+const routes = {
+	'/': {
+  	component: App
+  }
+}
+
+Vue.use(Vonic.app, {
+	routes: routes,
+  defaultRouterUrl: '/'
+})
+
+</script>
+  
+
+
+
+</body>
+</html>
