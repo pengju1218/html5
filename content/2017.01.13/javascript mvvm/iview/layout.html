@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>iview example</title>
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+</head>
+<body>
+<div id="app">
+   
+	
+
+    <p>顶部对齐</p>
+    <Row type="flex" justify="center" align="top" class="code-row-bg">
+        <i-col span="4"><p style="height: 80px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 30px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 100px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 60px">col-4</p></i-col>
+    </Row>
+    <p>底部对齐</p>
+    <Row type="flex" justify="center" align="bottom" class="code-row-bg">
+        <i-col span="4"><p style="height: 80px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 30px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 100px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 60px">col-4</p></i-col>
+    </Row>
+    <p>居中对齐</p>
+    <Row type="flex" justify="center" align="middle" class="code-row-bg">
+        <i-col span="4"><p style="height: 80px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 30px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 100px">col-4</p></i-col>
+        <i-col span="4"><p style="height: 60px">col-4</p></i-col>
+    </Row>
+	
+	
+	
+	
+	
+	
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            }
+        }
+    })
+  </script>
+</body>
+</html>
