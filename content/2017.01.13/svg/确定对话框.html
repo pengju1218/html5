@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>模拟的confirm</title>
+	<link href="css/global.css" rel="stylesheet"/>
+  <!--   confirm的重写 -->
+   <script type="text/javascript">
+	//网页被卷去的上高度
+	function EV_myScrollTop(){
+		var n=window.pageYOffset
+				|| document.documentElement.scrollTop
+				|| document.body.scrollTop || 0;
+		return n;
+	}
+	//网页被卷去的左宽度
+	function EV_myScrollLeft(){
+		var n=window.pageXOffset
+				|| document.documentElement.scrollLeft
+				|| document.body.scrollLeft || 0;
+		return n;
+	}
+	//网页可见区域宽
+	function EV_myClientWidth(){
+		var n=document.documentElement.clientWidth
+				|| document.body.clientWidth || 0;
+		return n;
+	}
+	//网页可见区域高
+	function EV_myClientHeight(){
+		var n=document.documentElement.clientHeight
+				|| document.body.clientHeight || 0;
+		return n;
+	}
+	function zg(){
+		var bgObj=document.getElementById("zg");
+		var bgWidth=EV_myClientWidth();
+		var bgHeight=EV_myClientHeight();
+		var bgTop=EV_myScrollTop();
+		var bgLeft=EV_myScrollLeft();
+		bgObj.style.position   = "absolute";
+		bgObj.style.top        = bgTop+"px";
+		bgObj.style.left       = bgLeft+"px";
+		bgObj.style.width      = bgWidth + "px";
+		bgObj.style.height     = bgHeight + "px";
+		//bgObj.style.zIndex     = "-10000";
+		bgObj.style.background = "#000";
+		bgObj.style.filter     = "progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60,finishOpacity=60);";
+		bgObj.style.opacity    = "0.5";
+	}
+	function show_cr(){
+		if (document.getElementById('show')==null){
+			var sh=document.createElement("div");
+			sh.setAttribute('class','wrap');
+			sh.innerHTML="<div id=\'show\' ><h3 class=\' show-title\'>提示：</h3><p class=\' show-con\'>确定要跳转</p><div class=\'tc\'><a id=\'sure\' class=\'show-btn\'>确定</a><a id=\'qx\' class=\' show-btn\'>取消</a></div></div>";
+			document.body.appendChild(sh);
+		}
+	}
+	function zg_cr() {
+		var bgObj=document.createElement("div");
+		bgObj.setAttribute('id','zg');
+		document.body.appendChild(bgObj);
+	}
+	function dj(url) {
+		show_cr();
+		zg_cr();
+		zg();
+	   var so=document.getElementById("show");
+		var bgObj=document.getElementById("zg");
+		so.style.display="block";
+	   var su =document.getElementById("sure");
+		su.onclick =function () {
+		   window.location.href=url;
+		};
+	  var qx =document.getElementById("qx");
+		qx.onclick =function () {
+		so.style.display="none";
+			document.body.removeChild(bgObj);
+		}
+ }
+</script>
+<style type="text/css">
+/*confirm的样式*/
+.tc{text-align:center;}
+.wrap{position:fixed;top:35%;left:0;width:100%;z-index: 1000;}
+#show{width:260px;height: 150px;margin: 0 auto;background:#fff;border-radius:10px;}
+.show-title{border-radius:10px 10px 0 0;text-align:center;line-height:40px;background-color:#3586BC;color: #fff;font-weight: normal; }
+.show-con{padding: 10px 0; text-align:center;text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+.show-btn{display: inline-block;padding: 5px 25px ;color: #fff;border-radius:5px;border: 2px solid #3586BC;background-color: #3586BC;text-decoration: none;transition: 0.4s;margin: 0 10px;}
+.show-btn:hover{background-color: transparent;color: #3586BC;transition: 0.4s;}
+</style>
+</head>
+<body>
+<button  onclick="dj('https://www.baidu.com')" >确定退出</button>
+</body>
+</html>

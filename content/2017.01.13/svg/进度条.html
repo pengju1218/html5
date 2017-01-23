@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .w-box {
+            width: 150px;
+            height:150px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="w-box" id="w-box"></div>
+    <script>
+        function Cir(obj) {
+            this.Id = obj.id;
+            this.color1 = obj.backcolor||"#ccc";
+            this.color2 = obj.color||"#b20f0f";
+            this.per = obj.percent;
+            this.timer = obj.time||0.8;
+            this.fontSize = obj.fontSize||"14px";
+            this.borderWidth = obj.borderWidth||10;
+            this.data = function() {
+                var _this = this;
+                var box = document.getElementById(_this.Id);
+                _this.width = box.offsetWidth;
+                box.style.position = "relative";
+                box.innerHTML = `<svg version="1.1" xmlns="http://www.3w.org/2000/svg" width=${_this.width} height=${_this.width} style="transform: rotate(-90deg);">
+          <circle cx=${_this.width/2} cy=${_this.width/2} r=${_this.width/2-_this.borderWidth/2} stroke="${_this.color1}" fill="none" stroke-width="${_this.borderWidth}"></circle>
+          <circle cx=${_this.width/2} cy=${_this.width/2} r=${_this.width/2-_this.borderWidth/2} stroke="${_this.color2}" fill="none" stroke-width="${_this.borderWidth}" style="" class="w-circle"></circle>
+          </svg><div style="margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;width:${_this.width/2}px;height:${_this.width/2}px;text-align:center;line-height:${_this.width/2}px;font-weight:600;font-size:${_this.fontSize};">${parseInt(_this.per*100)}%</div>`;
+                document.getElementsByTagName("head")[0].innerHTML+=(`
+          <style>
+           .w-circle{
+                stroke-dasharray:0 ${(_this.width/2-_this.borderWidth/2)*2*Math.PI};
+                animation:w-c ${_this.timer}s ease-out forwards;
+            }
+           @keyframes w-c {
+                 100%{
+                    stroke-dasharray:${(_this.width/2-_this.borderWidth/2)*2*Math.PI*_this.per} ${(_this.width/2-_this.borderWidth/2)*2*Math.PI};
+                  }
+            }
+          </style>`)
+            };
+            this.data();
+        }
+    
+    </script>
+    <script>
+        var c = new Cir({
+            id:"w-box",//需要添加进度条的容器,进度条大小会根据容器大小占据
+            color:"#aaaa13",//进度条底层颜色默认#ccc
+            backcolor:"#c0d2e3",//进度条颜色默认#b20f0f
+            percent:0.866666,//进度百分比 0~1(小数保留2位)
+            time:1,//动画时间，如果不需要动画可设置为0
+            fontSize:"18px",//字体大小 默认14px
+            borderWidth:5//进度条宽度 默认10
+        });
+
+    </script>
+</body>
+
+</html>
