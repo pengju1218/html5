@@ -1,0 +1,117 @@
+﻿ <!DOCTYPE>
+    <html>
+        <head>
+            <title>选择地区</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+            <link rel="stylesheet" type="text/css" href="css/mobile-select-area.css">
+            <link rel="stylesheet" type="text/css" href="css/dialog.css">
+			
+            <script type="text/javascript" src="js/zepto.js"></script>
+            <script type="text/javascript" src="js/dialog.js"></script>
+			            <script type="text/javascript" src="js/jquery.js"></script>
+			
+            <script type="text/javascript" src="js/mobile-select-area.js"></script>
+        </head>
+        <body>
+            <input type="text" id="txt_area" value="浙江省 杭州市 滨江区"/>
+            <input type="hidden" id="hd_area" value="1,1,1"/>
+           <!-- <script>
+            var selectArea = new MobileSelectArea();
+            selectArea.init({trigger:$('#txt_area'),value:$('#hd_area').val(),data:'data.json'});
+            </script>-->
+			
+			
+			<script>
+				var json =[{
+		"id": 1,
+		"name": "浙江省",
+		"child": [{
+			"id": "1",
+			"name": "杭州市",
+			"child": [{
+				"id": 1,
+				"name": "滨江区"
+			}, {
+				"id": 2,
+				"name": "西湖区"
+			}, {
+				"id": 2,
+				"name": "余杭区"
+			}, {
+				"id": 2,
+				"name": "留下区"
+			}]
+		}, {
+			"id": "2",
+			"name": "宁波市",
+			"child": []
+		}, {
+			"id": "3",
+			"name": "温州市",
+			"child": []
+		}]
+	}, {
+		"id": 2,
+		"name": "江苏省",
+		"child": [{
+			"id": "1",
+			"name": "南京",
+			"child": [{
+				"id": 1,
+				"name": "解放区"
+			}]
+		}]
+	}, {
+		"id": 3,
+		"name": "湖北省"
+	}];
+				var selectArea2 = new MobileSelectArea();
+				selectArea2.init({trigger:'#txt_area',value:$('#txt_area').data('value'),data:json,eventName:'click'});
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+			<div>默认选中空:<input type="text" id="txt_area3" onclick="add()"/></div>
+		<script>
+		var selectArea3 = new MobileSelectArea();
+		
+		
+		function add(){
+			alert('111111111111111111111111');
+		 $.getJSON ("data.json", function (data1)
+        {
+		alert('111111111111111111111111');
+	alert(data1);
+            //$.each (data, function (i, item)
+           		selectArea3.init({trigger:'#txt_area3',data:data1,default:0});
+        });
+		}
+		
+		
+		
+
+		</script>
+		<div>置底显示:<input type="text" id="txt_area4"/></div>
+		<script>
+		var selectArea = new MobileSelectArea();
+		selectArea.init({trigger:'#txt_area4',data:json,default:0,position:"bottom"});
+		</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        </body>
+    </html>

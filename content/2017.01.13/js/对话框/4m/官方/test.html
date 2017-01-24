@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta name="apple-touch-fullscreen" content="yes">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<link href="css/mbox.css" type="text/css" rel="stylesheet">
+<script src="js/mbox.js" type="text/javascript"></script>
+<style>
+
+.disn{ display:none;}
+/*start	
+对于正常方向的框，每个子元素的上边缘沿着框的顶边放置。
+对于反方向的框，每个子元素的下边缘沿着框的底边放置。
+测试
+end	
+对于正常方向的框，每个子元素的下边缘沿着框的底边放置。
+对于反方向的框，每个子元素的上边缘沿着框的顶边放置。
+测试
+center	
+均等地分割多余的空间，一半位于子元素之上，另一半位于子元素之下。*/
+.main{
+	height:100%;width:100%;position:absolute;
+	display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:center;-webkit-box-pack:center;
+}
+.content{
+	background:#ccc;height:200px;width:80%;
+}
+</style>
+</head>
+
+<body>
+<div class="main" style="display:none;">
+	<div class="content" style="line-height:2;text-align:center;">方案二：使用position & margin:auto 垂直居中</div>
+</div>
+<div style="padding:25px 50px; font-size:16px;"><a href="javascript:;" id="ontan">请点击我！</a></div>
+<div style="padding:25px 50px; font-size:16px;"><a href="javascript:;" id="ontan01">请点击我！</a></div>
+<div style="padding:25px 50px; font-size:16px;"><a href="javascript:;" id="spload">请点击我！sploading</a></div>
+<div class="disn" id="ces" style="width:100%;">
+   <ul>
+        <li class="tt" id="ddd">点我看效果</li>
+        <li id="yy">toggleClass</li>
+   </ul>
+</div>
+<p id="test" >对于正常方向的框，每个子元素的上边缘沿着框的顶边放置对于正常方向的框，原创弹出层插件</p>
+</body>
+<script type="text/javascript">
+
+	var getId=document.getElementById("ontan");
+	var getId01=document.getElementById("ontan01");
+	document.getElementById("ddd").onclick=function(){alert(121545455)}
+	getId.onclick=function(){
+		mBox.open({
+			//width:'150px',
+			//title:["我就是标题！","background-color:#3293E0;color:#fff;"],
+			content:mBox.cell("#test"),
+			btnName:['确定','取消']
+		});
+	}
+	getId01.onclick=function(){
+		$M.open({
+			//width:'150px',
+			//title:["我就是标题！","background-color:#3293E0;color:#fff;"],
+			content:"<div>对于正常方向的框</div>",
+			btnName:['确定','取消']
+		});
+	}
+
+	
+</script>
+
+</html>

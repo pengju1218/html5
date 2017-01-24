@@ -1,0 +1,259 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>je-mBox弹层组件移动版</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link href="css/base.css" type="text/css" rel="stylesheet">
+<link href="css/mbox.css" type="text/css" rel="stylesheet">
+<script src="js/mbox.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="mainnav">
+          <ul>
+          <li><a href="http://www.jayui.com/">首页</a></li>
+          <li class="fr"><a href="http://fly.jayui.com/">社区</a></li>
+          </ul>
+    </div>
+</header>
+
+<section class="main">
+  
+    <h3 class="moh3">mBox弹层演示</h3>
+    <blockquote>boxtype弹层的类型， 1为（提示框，信息框，询问框）， 2为（页面层）， 3为（加载条）</blockquote>
+    <p class="demo" id="trys">
+        <a href="javascript:;">提示框(1)</a>
+        <a href="javascript:;">信息框(1)</a>
+        <a href="javascript:;">询问框(1)</a>
+        <a href="javascript:;">页面层(2)</a>
+        <a href="javascript:;">加载条(3)</a>
+    </p>
+</section>
+
+<section class="main">
+<h3 class="moh3">核心方法：mBox(options)</h3>
+<blockquote>options是一个对象，它包含了以下key: '默认值'</blockquote>
+<pre id="trycode" style="margin-top:10px;">
+width:"",  // 弹层的宽度，可用是百分比，可用是如（320px）
+height:"",  // 弹层的高度，可用是百分比，可用是如（320px）
+boxtype:0,  //弹层的类型
+title:[],  // 标题可以有2个参数，例如 ["标题","color:#fff"]，如果title:[]参数为空，不显示标题
+content:"请稍等,暂无内容！",  // 内容	
+conStyle:"background-color:#fff;", //内容框的css样式，你可以写更多样式
+btnName:[],  // 是否显示按钮  确定："\u786E\u5B9A", 取消："\u53D6\u6D88"
+btnStyle:[],  //按钮CSS样式
+yesfun:null,  // 确定按钮回调函数
+nofun:null,  // 取消按钮回调函数
+closefun:null,  // 右上角关闭取消按钮回调函数
+closeBtn:[ false, 1 ],  // 参数一是否显示右上角关闭取消按钮，默认false，参数二按钮颜色 1是黑色，2是白色
+time:null,  // 自动关闭时间(毫秒)
+fixed:true,  // 是否静止定位
+mask:true,  //是否显示遮罩层
+maskClose:true,  // 点击遮罩层是否关闭，默认true
+maskColor:"rgba(0,0,0,0.5)",  // 遮罩层颜色可以是rgba也可以是rgb
+margin:"10px 10px",
+zIndex:1e4,  // 层级关系
+success:null,  //层成功弹出层的回调函数，返回一个参数为当前层元素对象
+endfun:null   //层彻底销毁后的回调函
+</pre>
+
+<h3 class="moh3">各类调用代码</h3>
+<blockquote>调用方式：jemBox.open(options) &nbsp;&nbsp;或 &nbsp;&nbsp; mBox.open(options) &nbsp;&nbsp;或 &nbsp;&nbsp; $M.open(options)</blockquote>
+<pre id="trycode" style="margin-top:10px;">
+/** 以下是调用代码（此处不展示事件绑定）*/
+//提示框
+mBox.open({
+    content: '您好',
+    time: 2 //2秒后自动关闭
+});
+//信息框
+mBox.open({
+    title: ['信息','border-bottom: 1px solid #EBEBEB;'],
+    content: '移动版和PC版不能同时使用在同一页面。'
+});
+//询问框
+mBox.open({
+    title: ['提示','border-bottom: 1px solid #EBEBEB;'],
+    content: '您确定要刷新一下本页面吗？',
+    btnName: ['嗯', '不要'],
+    yesfun: function(index){
+        location.reload();
+        mBox.close(index);
+    }
+});
+//页面层
+mBox.open({
+    boxtype: 2,
+    content: '可传入任何内容，支持html。一般用于手机页面中',
+    conStyle: 'position:fixed; bottom:0; left:0; width:100%; height:150px; padding:10px 0; border:none;'
+});
+//加载层
+mBox.open({
+    boxtype: 3,
+    conStyle: 'text-align:center;',
+    maskColor:"rgba(0,0,0,0.8)",
+    time: 6,
+    content: '&lt;div class="jemboxloadspin">&lt;div class="jemboxloading">&lt;/div>&lt;/div>&lt;p style="line-height:20px;">加载测试中&lt;/p>'
+});
+</pre>
+
+
+    <h3 class="moh3">注意事项</h3>
+    <blockquote>mBox 弹层插件不对iframe提供支持</blockquote>
+    
+    
+    <h3 class="moh3">功能演示</h3>
+    
+    <p style="margin-top:10px;"><strong>普通信息框，并设置2秒自动关闭：</strong></p>
+    <pre>
+<span id="demo1">jemBox.open({
+    content: '通过conStyle设置你想要的样式',
+    conStyle: 'background-color:#09C1FF; color:#fff; border:none;',
+    time: 2
+});</span>
+<a href="javascript:;"  class="button" onclick="new Function(demo1.innerHTML)();">运行</a>
+</pre>
+
+    <h3 class="moh3">提示框，并自定义标题风格：</h3>
+    <pre>
+<span id="demo2a">$M.open({
+    title: [
+        '我是标题',
+        'background-color:#0099CC; color:#fff;'
+    ],
+    closeBtn:[ true, 2 ],
+    content: '标题风格任你定义。。'
+    
+});</span>
+<a href="javascript:;"  class="button" onclick="new Function(demo2a.innerHTML)();">运行</a>
+</pre>
+
+    <h3 class="moh3">提示框，并显示1个按钮：</h3>
+    <pre>
+<span id="demo2">$M.open({
+    content: '通过conStyle设置你想要的样式',
+    btnName: ['OK']
+});</span>
+<a href="javascript:;"  class="button"onclick="new Function(demo2.innerHTML)();">运行</a>
+</pre>
+
+    <h3 class="moh3">询问框，并显示2个按钮，不允许点遮罩关闭：</h3>
+    <pre>
+<span id="demo3">mBox.open({
+    content: '你是想确认呢，还是想取消呢？',
+    btnName: ['确认', '取消'],
+    maskClose: false,
+    yesfun: function(){
+        mBox.open({content: '你点了确认', time: 1});
+    }, nofun: function(){
+        mBox.open({content: '你选择了取消', time: 1});
+    }
+});</span>
+
+<a href="javascript:;"  class="button" onclick="new Function(demo3.innerHTML)();">运行</a>
+</pre>
+    <h3 class="moh3">内容设置：</h3>
+    <blockquote>
+    <p>类型：String/DOM，content可传入的值是灵活多变的，不仅可以传入普通的html内容，还可以指定DOM</p>
+    <p>1、当content为String时,接受并展现字符串型的内容</p>
+    <p>1、当content为DOM时,接受的是一段html片段并展现html片段的内容</p>
+    </blockquote>
+<pre>
+//如果是页面层
+<span id="demoyem">
+mBox.open({
+    boxtype: 1, 
+    content: '传入任意的文本或html' //这里content是一个普通的String
+});
+</span>
+//html片段
+<div id="piand">大家好！我就是html片段了</div>
+<span id="demopiand">
+mBox.open({
+    boxtype: 1,
+    content: mBox.cell("#piand")   
+    //mBox.cell(elem)，elem可以是ID\CLASS\TAG等 //这里content是一个DOM
+});
+</span>
+//Ajax获取
+$.post('url', {}, function(str){
+    mBox.open({
+        boxtype: 1,
+        content: str //注意，如果str是object，那么需要字符拼接。
+    });
+});
+<a href="javascript:;"  class="button" onclick="new Function(demoyem.innerHTML)();">运行页面层</a>
+<a href="javascript:;"  class="button"  onclick="new Function(demopiand.innerHTML)();">运行DOM-html片段</a>
+   
+</pre>
+    <h3 class="moh3">页面层，全屏：</h3>
+    <blockquote>
+    <p>mBox.close(idx); //idx为你调用mBox时返回的索引</p>
+    <p>mBox.closeAll(); // 它将关闭所有层  </p>
+    </blockquote>
+    <pre>
+<span id="demo5">var pageii = mBox.open({
+    boxtype: 2,
+    content: html,
+    conStyle: 'position:fixed; left:0; top:0; width:100%; height:100%; border:none;background-color:#fff;'
+});</span>
+<a href="javascript:;"  class="button" onclick="new Function('var html = demo5a.value;'+demo5.innerHTML)();">运行</a>
+</pre>
+<textarea id="demo5a" style="display:none;">
+    <div style="padding:20px;">
+        Hi，欢迎您体验移动版的mBox弹层组件，这看上去是一个新页面的样子。。。
+        <p>此时你一定迫不及待地想关闭掉它，你只需要执行这么一段代码：</p>
+<pre>
+//elem为您获取的元素对象
+elem.addEventListener('click', function(){
+    mBox.close(pagei); //pagei为你调用mBox时返回的索引
+    //还可以通过mBox.closeAll(); 它将关闭所有层  
+})
+</pre>
+<a href="javascript:;"  class="button" onclick="mBox.closeAll(); mBox.open({content:'这下世变得界清静了！', time:2});  ">我要关闭！！</a>
+   </div>
+</textarea>
+
+    
+    <h3 class="moh3">结语</h3>
+    <blockquote>例子毕竟只是带你入门，我们更希望你认真去阅读文档手册，那里列举了mBox所有的接口，它们会帮助你完成形。</blockquote>
+
+    <p style="padding:50px 0; text-align:center; color:#999;">Powered by jayui.com ?2015-2016</p>
+
+</section>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script src="js/demo.js"></script>
+<script>
+//展示当前版本
+//$('#version').html(mbox.version);
+
+ //获取下载数
+$.get('http://www.jayui.com/downstatis/downstatis.php?name=mbox', function(res){
+	$('#downnum').html(res.totals);
+}, 'jsonp');
+
+//记录下载
+$('.mboxdown').on('click',function(){
+	$.get('http://www.jayui.com/downstatis/downstatis.php?name=mbox&type=yes');
+});
+
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<div style="display:none"><script src="http://s95.cnzz.com/stat.php?id=1257125172&web_id=1257125172" language="JavaScript"></script></div>
+</body>
+</html>
+
+

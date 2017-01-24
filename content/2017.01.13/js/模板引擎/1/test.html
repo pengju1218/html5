@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jetpl模板引擎</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <script type="text/javascript" src="jetpl.js"></script>
+</head>
+<style>
+*html{background-image:url(about:blank);background-attachment:fixed;}
+body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;}
+article,aside,header,footer,nav,section,figure,figcaption,hgroup,progress,canvas{display:block}
+body{font:14px Arial,"\5b8b\4f53", sans-serif;-webkit-text-size-adjust:100%;color:#333333;background:#f7f7f7;}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%; font-weight:normal; font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;font-size:100%;empty-cells:show}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,th,var{font-style:normal; font-weight:normal;}
+button,input,select,textarea{font-family:Arial, Helvetica, sans-serif;text-decoration: none;outline:none;-moz-outline:none;font-size:100%;}
+input, select, label {vertical-align: middle;}
+button,input{line-height:normal}
+textarea{resize:none;overflow:auto;vertical-align:top}
+ul,ol,li,dl{list-style-type:none;}         i,em{font-style:normal}     svg:not(:root){overflow:hidden}
+img{vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;-webkit-tap-highlight-color:rgba(0,0,0,0);}   
+a{color:#333;text-decoration: none;outline:none;} 
+a:link {color:#333;} 
+a:visited {color:#333;} 
+a:hover {color:#c00;text-decoration:underline;}
+a:active{blr:expression(this.onFocus=this.blur())}   .tc{text-align:center;}
+.f0{font-size:0;}  .f12{font-size:12px;}  .f14{font-size:14px;} .f16{font-size:16px;}  .f18{font-size:18px;}  .f20{font-size:20px;}   .f22{font-size:22px;} 
+.f24{font-size:24px;}   .f26{font-size:26px;}   .f28{font-size:28px;}   .f30{font-size:30px;} 
+.fmy{font-family:'Microsoft Yahei',"\u5fae\u8f6f\u96c5\u9ed1","\5b8b\4f53",Arial;}
+.far{font-family:Arial,"\5b8b\4f53", sans-serif;}
+.warpbox{max-width:1000px; height:auto!important;margin-left:auto; margin-right:auto; line-height:1.5;background-color: #fff; padding:30px 22px;box-shadow: 0px 2px 4px #aaa;}
+.test li{ line-height:40px; border-bottom:1px #ccc dashed;}
+</style>
+<body>
+<div class="warpbox fmy">
+     <div class="test">
+          <h1 class="tc f24" style="margin-bottom:25px;">jetpl模板引擎--演示</h1>
+          <ul id="testid"></ul>
+     </div>
+
+     <div class="test" style="margin-top:45px;">
+     <ul id="view"></ul>
+     </div>
+     <div class="test"  style="margin-top:25px;" id="content"></div>
+</div>
+
+<script id="testData" type="text/tpl">
+    <h2 class="f18">标题: <p onclick="go('{%= intro %}')"></p></h2>
+	<p>{%= jetpl.escape(desc) %}</p>
+	<p>{%= sex==2 ? '男': '女' %}</p>
+	{% var vs=100; %}
+    {% for (var i=0;i<list.length;i++) { %}
+		{% for (var k=0;k<list[i].childmenu.length;k++) { %}
+			<li>{%= i %}. {%= list[i].childmenu[k].name %} --- ID：{%= list[i].childmenu[k].id %} ---- 时间：{%= jetpl.date(list[i].childmenu[k].time,"YYYY-MM-DD h:m:s") %}
+			</li>	
+		{% } %}
+	{% } %}
+
+</script>
+<script id="list" type="text/tpl">
+<h2  class="f18">{% intro %}</h2>
+
+<ul>
+    {% var vs='(each循环)'; %}
+    {{each list val i}}
+	    {{each val.childmenu vals k}}
+		    <li>
+			<span>{%=i%}. </span>
+			<span>标题: {%=vals.name%}---- &nbsp;&nbsp;&nbsp;</span>
+			<span>ID： {%= vals.id %} ---- &nbsp;&nbsp;&nbsp;</span>
+			<span>time： {%= jetpl.date(vals.time,"YYYY-MM-DD") %}  &nbsp;&nbsp;&nbsp;{%=vs%}</span>
+			</li>
+		{{/each}}
+	{{/each}}
+</ul>
+</script>
+<script id="contentData" type="text/tpl">
+    <h2 class="f18">标题: {%= title %}</h2>
+
+    {% for (var i=0;i<list.length;i++) { %}
+
+			<span>{%= i %}. {%= list[i] %} &nbsp;&nbsp;</span>
+
+	{% } %}
+
+</script>
+<script type="text/javascript">
+    
+var rudata = {
+	title: '我是模板标题',
+	list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+};
+var onedata = {
+    title: "abc",
+    list: [
+        {name: "乱码",       city: "杭州", post: "前端", time: 1435650377},
+        {name: "冰花",       city: "北京", post: "水军", time: 1435650377},
+        {name: "高琦",       city: "福建", post: "水军", time: 1435650377},
+        {name: "银狐",       city: "汕头", post: "前端", time: 1435650377},
+        {name: "辛巴",       city: "深圳", post: "前端", time: 1435650377},
+        {name: "龙秋明",     city: "北京", post: "前端", time: 1435650377},
+        {name: "小麒麟",     city: "北京", post: "前端", time: 1435650377},
+        {name: "秋天的落叶", city: "广东", post: "前端", time: 1435650377}
+    ]
+};
+var data = {
+	intro: '一群码javascript的骚年，幻想改变世界，却被世界改变。',
+	desc:"<u>html代码</u> <em>em</em>",
+	sex:1,
+	list:[
+        {
+            "name": "美妆",
+            "id": "48",
+            "childmenu": [
+                {
+                    "fullName": "面部护理",
+                    "id": 52,
+                    "name": "面部护理", time: 1435650377
+                },
+                {
+                    "fullName": "面膜",
+                    "id": 69,
+                    "name": "面膜", time: 1435650377
+                },
+                {
+                    "fullName": "身体护理",
+                    "id": 54,
+                    "name": "身体护理", time: 1435650377
+                },
+                {
+                    "fullName": "彩妆",
+                    "id": 53,
+                    "name": "彩妆", time: 1435650377
+                }
+            ]
+        },
+        {
+            "name": "母婴",
+            "id": "49",
+            "childmenu": [
+                {
+                    "fullName": "纸尿裤",
+                    "id": 56,
+                    "name": "纸尿裤", time: 1435650377
+                },
+                {
+                    "fullName": "奶粉",
+                    "id": 71,
+                    "name": "奶粉", time: 1435650377
+                },
+                {
+                    "fullName": "辅食",
+                    "id": 60,
+                    "name": "辅食", time: 1435650377
+                },
+                {
+                    "fullName": "用具",
+                    "id": 70,
+                    "name": "用具", time: 1435650377
+                },
+                {
+                    "fullName": "洗护/口腔",
+                    "id": 58,
+                    "name": "护肤洗浴", time: 1435650377
+                }
+            ]
+        },
+        {
+            "name": "护理",
+            "id": "50",
+            "childmenu": [
+                {
+                    "fullName": "头发护理",
+                    "id": 61,
+                    "name": "头发护理", time: 1435650377
+                },
+                {
+                    "fullName": "沐浴用品",
+                    "id": 73,
+                    "name": "沐浴用品", time: 1435650377
+                },
+                {
+                    "fullName": "口腔护理",
+                    "id": 72,
+                    "name": "口腔护理", time: 1435650377
+                },
+                {
+                    "fullName": "女士用品",
+                    "id": 63,
+                    "name": "女士用品", time: 1435650377
+                }
+            ]
+        },
+        {
+            "name": "保健",
+            "id": "51",
+            "childmenu": [
+                {
+                    "fullName": "健康食品",
+                    "id": 66,
+                    "name": "健康食品", time: 1435650377
+                },
+                {
+                    "fullName": "计生用品",
+                    "id": 67,
+                    "name": "计生用品", time: 1435650377
+                },
+                {
+                    "fullName": "维他命",
+                    "id": 74,
+                    "name": "维他命", time: 1435650377
+                },
+                {
+                    "fullName": "身体调理",
+                    "id": 75,
+                    "name": "身体调理", time: 1435650377
+                },
+                {
+                    "fullName": "眼部护理",
+                    "id": 76,
+                    "name": "眼部护理", time: 1435650377
+                }
+            ]
+        }
+    ]
+}
+
+var gethtml = document.getElementById('testData').innerHTML
+jetpl(gethtml).render(data, function(html){
+	document.getElementById('testid').innerHTML = html
+});
+
+
+jetpl('#list').render(data, function(html){
+	document.getElementById('view').innerHTML = html
+});
+
+jetpl('#contentData').render(rudata, function(html){
+	document.getElementById('content').innerHTML = html
+});
+</script>
+</body>
+</html>

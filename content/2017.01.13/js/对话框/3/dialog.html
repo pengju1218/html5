@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="skin/default.css" rel="stylesheet" type="text/css">
+<style>
+*html{background-image:url(about:blank);background-attachment:fixed;}
+body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;}
+body{font:12px/1.5 Arial,"\5b8b\4f53", sans-serif;-webkit-text-size-adjust:100%;color:#333333;background:white; height:2000px;}
+.ces{ padding:20px 0 30px 20px;}
+.inpces{display:inline-block; margin:6px 8px 6px 0; height:32px; line-height:0; padding:0 20px; vertical-align:top; font-size:14px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;background:rgb(69,146,240);border:1px #3484e5 solid;color:#fff; text-decoration:none; cursor:pointer;}
+.bl{ display:none;}
+
+</style>
+
+</head>
+
+<body>
+<p class="ces">
+
+<input class="inpces" id="ondia" type="button" value="点击我弹窗">
+</p>
+<div >
+<input class="inpces" id="onload" type="button" value="点击我loading">
+<input class="inpces" id="onshde" type="button" value="点击我html片段">
+</div>
+<div id="yces" style="width:100%;">
+    <div class="consty">
+       <ul>
+            <li class="tt" id="ddd"><a href="#">点我看效果</a></li>
+            <li id="yy"><input type="text" name="q" value="js 避免输入状态中 ESC 误操作关闭" maxlength="100" autocomplete="off"></li>
+       </ul>
+       <ul>
+            <li class="tt" id="ddd"><a href="#">点我看效果</a></li>
+            <li id="yy"><input type="text" name="q" value="js 避免输入状态中 ESC 误操作关闭" maxlength="100" autocomplete="off"></li>
+       </ul>
+       <p></p>
+       <em></em>
+    </div>   
+</div>
+
+<!--<iframe id="if01" class="layui-layer-load" frameborder="0" src="ifr01.html" style="width:100%; height:400px;"></iframe>-->
+
+
+
+<p>现在浏览器对于边框的处理方式都是一样的，都是在原有宽度的基础上再加上边框的宽度。一般来说，比较好的作法是div在设定宽度的时候减去border的宽度。当然这样可能之前预设的整数宽度，例如200px，就会变成一个类似于198px的数值，在观感上让人略有不爽。所以对于IE8及以上版本的浏览器，可以使用box-sizing这个CSS3的样式，设置属性值为border-box，这样就可以让DIV的宽度等于内容+padding+border的宽度。具体的定义方法可以是下面这样：
+.box {box-sizing:border-box; width:200px; border:1px solid #ccc;}
+这样div的宽度就不会受到border、padding这些样式的影响了~~不过IE6和7是不支持这个属性的，使用的时候要留意~~
+
+再补充一下，如果是希望宽度等于内容+padding+border的话，就可以这样定义：box-sizing:content-box;</p>
+<p>现在浏览器对于边框的处理方式都是一样的，都是在原有宽度的基础上再加上边框的宽度。一般来说，比较好的作法是div在设定宽度的时候减去border的宽度。当然这样可能之前预设的整数宽度，例如200px，就会变成一个类似于198px的数值，在观感上让人略有不爽。所以对于IE8及以上版本的浏览器，可以使用box-sizing这个CSS3的样式，设置属性值为border-box，这样就可以让DIV的宽度等于内容+padding+border的宽度。具体的定义方法可以是下面这样：
+.box {box-sizing:border-box; width:200px; border:1px solid #ccc;}
+这样div的宽度就不会受到border、padding这些样式的影响了~~不过IE6和7是不支持这个属性的，使用的时候要留意~~
+
+再补充一下，如果是希望宽度等于内容+padding+border的话，就可以这样定义：box-sizing:content-box;</p>
+<p>现在浏览器对于边框的处理方式都是一样的，都是在原有宽度的基础上再加上边框的宽度。一般来说，比较好的作法是div在设定宽度的时候减去border的宽度。当然这样可能之前预设的整数宽度，例如200px，就会变成一个类似于198px的数值，在观感上让人略有不爽。所以对于IE8及以上版本的浏览器，可以使用box-sizing这个CSS3的样式，设置属性值为border-box，这样就可以让DIV的宽度等于内容+padding+border的宽度。具体的定义方法可以是下面这样：
+.box {box-sizing:border-box; width:200px; border:1px solid #ccc;}
+这样div的宽度就不会受到border、padding这些样式的影响了~~不过IE6和7是不支持这个属性的，使用的时候要留意~~
+
+再补充一下，如果是希望宽度等于内容+padding+border的话，就可以这样定义：box-sizing:content-box;</p>
+<p>现在浏览器对于边框的处理方式都是一样的，都是在原有宽度的基础上再加上边框的宽度。一般来说，比较好的作法是div在设定宽度的时候减去border的宽度。当然这样可能之前预设的整数宽度，例如200px，就会变成一个类似于198px的数值，在观感上让人略有不爽。所以对于IE8及以上版本的浏览器，可以使用box-sizing这个CSS3的样式，设置属性值为border-box，这样就可以让DIV的宽度等于内容+padding+border的宽度。具体的定义方法可以是下面这样：
+.box {box-sizing:border-box; width:200px; border:1px solid #ccc;}
+这样div的宽度就不会受到border、padding这些样式的影响了~~不过IE6和7是不支持这个属性的，使用的时候要留意~~
+
+再补充一下，如果是希望宽度等于内容+padding+border的话，就可以这样定义：box-sizing:content-box;</p>
+<p>现在浏览器对于边框的处理方式都是一样的，都是在原有宽度的基础上再加上边框的宽度。一般来说，比较好的作法是div在设定宽度的时候减去border的宽度。当然这样可能之前预设的整数宽度，例如200px，就会变成一个类似于198px的数值，在观感上让人略有不爽。所以对于IE8及以上版本的浏览器，可以使用box-sizing这个CSS3的样式，设置属性值为border-box，这样就可以让DIV的宽度等于内容+padding+border的宽度。具体的定义方法可以是下面这样：
+.box {box-sizing:border-box; width:200px; border:1px solid #ccc;}
+这样div的宽度就不会受到border、padding这些样式的影响了~~不过IE6和7是不支持这个属性的，使用的时候要留意~~
+
+
+
+<script type="text/javascript" src="js/jeBox.js"></script>
+<script type="text/javascript">
+//console.log(JED(".consty").contents())
+
+JED("#ondia").bind("click",function(){
+	var index = jeBox.open({
+		cell:"jbx",
+		//title:"false",
+		maxBtn:true,
+		area:["80%"],
+		//icon:2,
+		type:2,
+		content:'ifr01.html',
+		//time:2,
+		masklock : true ,
+		//offset:["@15%","@20%"],
+		//shadow:false,
+		//scrollbar:false,
+		button: [ {name: '确定'},{name: '取消'},
+				{
+					name: '改变内容为同意',
+					callback: function (index) {
+						jeBox.content('你同意了',index)
+						//jeBox.close(index);
+						return false;
+					}
+				},
+				{
+					name: '不同意',
+					callback: function () {
+						jeBox.msg("你选择了不同意",{
+							icon:1,
+							button:[{name:"确定"},{name:"取消"}]
+						})
+					}
+				},
+				{
+					name: '无效按钮',
+					disabled: true
+				},
+				{
+					name: '关闭我'
+				}
+			],
+		//nofun: function(index){ return false; },
+		success:function(cell){
+			//alert(cell.find(".jeBox-content").height())
+		}
+	})
+	//jeBox.full(index);
+})
+
+JED("#onload").bind("click",function(){
+	//jeBox.alert("确认删除吗？",{icon:1})
+	jeBox.loading(3,"加载中...",{time:3});
+})
+JED("#onshde").bind("click",function(){
+	jeBox.open({
+		area:["60%","30%"],
+		content:JED("#yces")[0]
+	});
+})
+
+//console.log(document.documentElement.clientWidth)
+</script>
+</body>
+</html>
