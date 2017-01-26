@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>新建待办事项</title>
+  <!--<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+  <script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>-->
+    
+  <link href="css/sui.min.css" rel="stylesheet">
+	
+  <link href="css/sui-append.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/sui.min.js"
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+  <div class="sui-container">
+  <form class="sui-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label">单选框：</label>
+    <div class="controls">
+      <label data-toggle="radio" class="radio-pretty inline checked">
+        <input type="radio" checked="checked" name="radio"><span>服装</span>
+      </label>
+      <label data-toggle="radio" class="radio-pretty inline">
+        <input type="radio" name="radio"><span>电器</span>
+      </label>
+      <label data-toggle="radio" class="radio-pretty inline">
+        <input type="radio" name="radio"><span>美食</span>
+      </label>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">复选框：</label>
+    <div class="controls">
+      <label data-toggle="checkbox" class="checkbox-pretty inline checked">
+        <input type="checkbox" checked="checked"><span>鸣人</span>
+      </label>
+      <label data-toggle="checkbox" class="checkbox-pretty inline">
+        <input type="checkbox"><span>佐助</span>
+      </label>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">输入框（迷你）：</label>
+    <div class="controls">
+      <input type="text" class="input-mini">
+      <div class="sui-msg msg-tips msg-naked">
+        <div class="msg-con">提示信息，比如：建议你设置安全密码</div>
+        <s class="msg-icon"></s>
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">输入框（小号）：</label>
+    <div class="controls">
+      <input type="text" class="input-small">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">输入框（中号）：</label>
+    <div class="controls">
+      <input type="text" class="input-medium">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">输入框（大号）：</label>
+    <div class="controls">
+      <input type="text" class="input-large">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">输入框（加大）：</label>
+    <div class="controls">
+      <input type="text" class="input-xlarge">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">输入框（加加）：</label>
+    <div class="controls">
+      <input type="text" class="input-xxlarge">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">时间选择：</label>
+    <div class="controls">
+      <input type="text" class="input-medium input-date"> 
+      -
+      <input type="text" class="input-medium input-date">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">备注：</label>
+    <div class="controls">
+      <textarea rows="3" class="input-block-level"></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label"></label>
+    <div class="controls">
+      <button type="submit" class="sui-btn btn-primary">提交审核</button>
+      <button type="reset" class="sui-btn">重置</button>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+
+<form class="sui-form form-horizontal">
+  <div class="control-group">
+    <label class="control-label v-top"><b style="color: #f00;">*</b> 
+      地点：
+    </label>
+    <div class="controls"><span class="sui-dropdown dropdown-bordered select"><span class="dropdown-inner"><a id="drop4" role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+            <input value="hz" name="city" type="hidden"><i class="caret"></i><span>杭州</span></a>
+          <ul id="menu4" role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="bj">北京</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="sb">圣彼得堡</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="hz">杭州</a></li>
+          </ul></span></span>
+      <div class="sui-msg msg-error msg-clear help-block">
+        <div class="msg-con">该项为必填项</div>
+        <s class="msg-icon"></s>
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label v-top"><b style="color: #f00;">*</b> <span style="padding:0 24px 0 0;">主</span>题：</label>
+    <div class="controls"><span class="sui-dropdown dropdown-bordered select"><span class="dropdown-inner"><a id="drop4" role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+            <input value="1" name="zt" type="hidden"><i class="caret"></i><span>吃喝玩乐</span></a>
+          <ul id="menu4" role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">
+            <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="1">吃喝玩乐</a></li>
+          </ul></span></span>
+      <input type="text" value="" class="input-xlarge">
+      <div class="sui-msg msg-error msg-clear help-block">
+        <div class="msg-con">该项为必填项</div>
+        <s class="msg-icon"></s>
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label v-top"><b style="color: #f00;">*</b> <span style="padding:0 24px 0 0;">内</span>容：</label>
+    <div class="controls">
+      <textarea style="height: 190px;" class="input-xxlarge"></textarea>
+      <div style="vertical-align: top;" class="sui-msg msg-tips msg-default">
+        <div class="msg-con">
+          <p style="margin-bottom: 8px; font-weight: bold;">消息渠道发送字数提示：</p>
+          <p>短信：&nbsp;&nbsp;61个汉字为一条短信，超过分多条发送</p>
+          <p>旺旺：&nbsp;&nbsp;系统文本对话消息XXXX个汉字</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浮出消息XXXX汉字</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Html系统对话消息XXX个汉字</p>
+          <p>站内信：XXXX个汉字</p>
+        </div>
+        <s class="msg-icon"></s>
+      </div>
+      <div class="sui-msg msg-error msg-clear help-block">
+        <div class="msg-con">该项为必填项</div>
+        <s class="msg-icon"></s>
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label"><span style="padding:0 24px 0 0;">链</span> 
+      接：
+    </label>
+    <div class="controls">
+      <input type="text" value="" class="input-xxlarge">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label v-top"><b style="color: #f00;">*</b> 
+      发送渠道：
+    </label>
+    <div class="controls">
+      <div class="row-fluid">
+        <label data-toggle="radio" class="radio-pretty inline checked">
+          <input type="radio" checked="checked" name="qudao"><span>商家中心</span>
+        </label>
+        <label data-toggle="radio" class="radio-pretty inline">
+          <input type="radio" name="qudao"><span>旺旺弹窗</span>
+        </label>
+        <label data-toggle="radio" class="radio-pretty inline">
+          <input type="radio" name="qudao"><span>站内信</span>
+        </label>
+        <div class="sui-msg msg-tips msg-default msg-clear help-block">
+          <div class="msg-con">是否向子账号发送消息：
+            <label data-toggle="radio" class="radio-pretty inline">
+              <input type="radio" name="zzh" value="1"><span>是</span>
+            </label>
+            <label data-toggle="radio" class="radio-pretty inline checked">
+              <input type="radio" checked="checked" name="zzh" value="0"><span>否</span>
+            </label>
+          </div>
+          <s class="msg-icon"></s>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <label class="checkbox inline">
+          <input name="m1" type="checkbox" value="1" checked=""> 
+          短信发送给店长
+        </label>
+      </div>
+      <div class="row-fluid">
+        <label class="checkbox inline">
+          <input name="m1" type="checkbox" value="2" checked=""> 
+          短信发送给电商决策人
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label"><b style="color: #f00;">*</b> 
+      审<span style="padding: 0 6px;">核</span>人：
+    </label>
+    <div class="controls"><span class="sui-dropdown dropdown-bordered select"><span class="dropdown-inner"><a id="drop4" role="button" data-toggle="dropdown" href="#" class="dropdown-toggle">
+            <input value="1" name="zt" type="hidden"><i class="caret"></i><span>管理员</span></a>
+          <ul id="menu4" role="menu" aria-labelledby="drop4" class="sui-dropdown-menu">
+            <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="javascript:void(0);" value="1">管理员</a></li>
+          </ul></span></span></div>
+  </div>
+  <div class="control-group">
+    <label class="control-label"></label>
+    <div class="controls">
+      <button type="submit" class="sui-btn btn-primary">提交审核</button>
+      <button type="reset" class="sui-btn">重置</button>
+    </div>
+  </div>
+</form>
+
+
+<form class="sui-form form-horizontal">
+  <div class="control-group warning">
+    <label for="inputWarning" class="control-label">警示输入框：</label>
+    <div class="controls">
+      <input type="text" id="inputWarning">
+      <span class="help-inline">警示文案</span>
+    </div>
+  </div>
+  <div class="control-group error">
+    <label for="inputError" class="control-label">错误输入框：</label>
+    <div class="controls">
+      <input type="text" id="inputError">
+      <span class="help-inline">出错文案</span>
+    </div>
+  </div>
+  <div class="control-group success">
+    <label for="inputSuccess" class="control-label">成功输入框：</label>
+    <div class="controls">
+      <input type="text" id="inputSuccess">
+      <span class="help-inline">成功文案</span>
+    </div>
+  </div>
+  <div class="control-group info">
+    <label for="inputInfo" class="control-label">帮助输入框：</label>
+    <div class="controls">
+      <input type="text" id="inputInfo">
+      <span class="help-inline">帮助文案</span>
+    </div>
+  </div>
+  <div class="control-group warning">
+    <label for="inputWarning" class="control-label">警示输入框：</label>
+    <div class="controls"><input type="text" id="inputWarning">
+      <div class="sui-msg msg-naked msg-tips"><i class="msg-icon"></i>
+        <div class="msg-con">警告</div>
+      </div>
+    </div>
+  </div>
+  <div class="control-group error">
+    <label for="inputError" class="control-label">错误输入框：</label>
+    <div class="controls"><input type="text" id="inputError">
+      <div class="sui-msg msg-naked msg-error"><i class="msg-icon"></i>
+        <div class="msg-con">错误</div>
+      </div>
+    </div>
+  </div>
+  <div class="control-group success">
+    <label for="inputSuccess" class="control-label">成功输入框：</label>
+    <div class="controls"><input type="text" id="inputSuccess">
+      <div class="sui-msg msg-naked msg-success"><i class="msg-icon"></i>
+        <div class="msg-con">成功</div>
+      </div>
+    </div>
+  </div>
+  <div class="control-group info">
+    <label for="inputInfo" class="control-label">帮助输入框：</label>
+    <div class="controls"><input type="text" id="inputInfo">
+      <div class="sui-msg msg-naked msg-info"><i class="msg-icon"></i>
+        <div class="msg-con">帮助</div>
+      </div>
+    </div>
+  </div>
+</form>
+  </div>
+</body>
+</html>
