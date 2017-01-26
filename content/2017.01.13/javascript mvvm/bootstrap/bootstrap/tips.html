@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bootstrap Demo</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/all.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead {font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;font-weight: normal;}
+.leftdiv{
+	background-color: #BBD8E9;
+    width: 20%;	
+	float: left;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+.rightdiv{
+	margin-left: 2.5%;
+    width: 77.5%;
+	float: left;
+	background-color: #DCEAF4;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+</style>
+<body style="margin:20px 20px 20px 20px;">
+
+
+  
+示例 1 : 非Bootstrap工具提示     <br> 
+示例 2 : 左侧提示     <br> 
+示例 3 : 右侧提示     <br> 
+示例 4 : 上方提示     <br> 
+示例 5 : 下方提示     <br> 
+
+
+
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">1</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>非Bootstrap工具提示 
+		 </h2>
+	</div>
+</div>
+<button class="btn btn-default" title="提示信息">非Bootstrap工具提示</button>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">2</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>左侧提示 
+		 </h2>
+	</div>
+</div>
+<button style="margin-left:100px" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="提示信息">鼠标悬停</button>
+ 
+<script>
+   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">3</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>右侧提示 
+		 </h2>
+	</div>
+</div>
+<button style="margin-right:100px" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="提示信息">鼠标悬停</button>
+ 
+<script>
+   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">4</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>上方提示 
+		 </h2>
+	</div>
+</div>
+
+<button style="margin-top:50px" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="提示信息">鼠标悬停</button>
+ 
+<script>
+   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">5</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>下方提示 
+		 </h2>
+	</div>
+</div>
+<button style="margin-bottom:50px" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="提示信息">鼠标悬停</button>
+ 
+<script>
+   $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+
+</body>
+</html>

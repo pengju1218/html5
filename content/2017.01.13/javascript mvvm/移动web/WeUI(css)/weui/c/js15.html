@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="../style/weui.css" tppabs="http://weixin.yoby123.cn/weui/style/weui.css"/>
+  <link rel="stylesheet" href="../style/weui2.css" tppabs="http://weixin.yoby123.cn/weui/style/weui2.css"/>
+  <link rel="stylesheet" href="../style/weui3.css" tppabs="http://weixin.yoby123.cn/weui/style/weui3.css"/>
+      <script src="../js/zepto.min.js" tppabs="http://weixin.yoby123.cn/weui/zepto.min.js"></script>
+	  <script src="../js/vue.min.js" tppabs="http://weixin.yoby123.cn/weui/vue.min.js"></script>
+
+</head>
+
+<body ontouchstart class="page-bg" >
+<div class="page-hd">
+        <h1 class="page-hd-title">
+           vue2.1.6
+        </h1>
+        <p class="page-hd-desc">闇�瑕佸姞杞絭ue.min.js</p>
+    </div>
+<div class="page-bd-15">
+<div id="app" v-bind:title="message">
+  {{message}}
+    <ol>
+    <li v-for="v in list">
+      {{ v.text }}
+    </li>
+  </ol>
+</div>
+
+
+<a href="javascript:if(confirm('http://vue.sike.io/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://vue.sike.io/'" tppabs="http://vue.sike.io/" target="_blank" >vue涓枃鏁欑▼</a>
+
+<a id="app2" href="#" v-on:click="alerts">{{message}}</a>
+</div>    
+    
+    
+      <script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: '浣犲ソ 涓栫晫!',
+    list:[{ text: '鎴戞槸澶╂湞灏忔皯' },{ text: '鎴戞槸缇庡浗鍏皯' },{ text: '鎴戞槸澶т緺绉绘皯' }]
+  }
+})
+var app2 = new Vue({
+  el: '#app2',
+  data: {
+    message: '涓枃鏁欑▼!'
+  },
+  methods: {
+    alerts: function () {
+      this.message ="浣犲ソ缇?;
+    }
+  }
+})
+      </script>    
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8"utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>FrozenUI Demo</title>
+        <script type="text/javascript" src="../../../tajs.qq.com/stats-sId=37342703" tppabs="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
+        <link rel="stylesheet" href="../css/frozen.css" tppabs="http://frozenui.github.io/frozenui/css/frozen.css">
+        <link rel="stylesheet" href="demo.css" tppabs="http://frozenui.github.io/frozenui/demo/demo.css">
+        <script src="../lib/zepto.min.js" tppabs="http://frozenui.github.io/frozenui/lib/zepto.min.js"></script>
+        <script src="../js/frozen.js" tppabs="http://frozenui.github.io/frozenui/js/frozen.js"></script>
+    </head>
+    
+    <body ontouchstart>
+        <header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i><h1>UI组件 </h1><button class="ui-btn">回首页</button>
+        </header>
+        <footer class="ui-footer ui-footer-btn">
+            <ul class="ui-tiled ui-border-t">
+                <li data-href="index.html" tppabs="http://frozenui.github.io/frozenui/demo/index.html" class="ui-border-r"><div>基础样式</div></li>
+                <li data-href="ui.html" tppabs="http://frozenui.github.io/frozenui/demo/ui.html" class="ui-border-r"><div>UI组件</div></li>
+                <li data-href="js.html" tppabs="http://frozenui.github.io/frozenui/demo/js.html"><div>JS插件</div></li>
+            </ul>
+        </footer>
+        <section class="ui-container">
+
+
+
+<section id="list">
+    <div class="demo-item">
+        <div class="demo-block">
+            <ul class="ui-list ui-list-pure ui-border-b">
+                
+                <li class="ui-border-t" data-href="panel.html" tppabs="http://frozenui.github.io/frozenui/demo/panel.html">
+                  面板
+                </li>
+                <li class="ui-border-t" data-href="avatar.html" tppabs="http://frozenui.github.io/frozenui/demo/avatar.html">
+                  圆角头像
+                </li>
+                <li class="ui-border-t" data-href="badge.html" tppabs="http://frozenui.github.io/frozenui/demo/badge.html">
+                  徽章
+                </li>
+                <li class="ui-border-t" data-href="reddot.html" tppabs="http://frozenui.github.io/frozenui/demo/reddot.html">
+                  红点
+                </li>
+                <li class="ui-border-t" data-href="tag.html" tppabs="http://frozenui.github.io/frozenui/demo/tag.html">
+                  角标
+                </li>
+                <li class="ui-border-t" data-href="label.html" tppabs="http://frozenui.github.io/frozenui/demo/label.html">
+                  标签
+                </li>
+                <li class="ui-border-t" data-href="btn.html" tppabs="http://frozenui.github.io/frozenui/demo/btn.html">
+                  按钮
+                </li>
+                <li class="ui-border-t" data-href="form.html" tppabs="http://frozenui.github.io/frozenui/demo/form.html">
+                  表单
+                </li>
+                <li class="ui-border-t" data-href="list.html" tppabs="http://frozenui.github.io/frozenui/demo/list.html">
+                  列表
+                </li>
+                <li class="ui-border-t" data-href="searchbar.html" tppabs="http://frozenui.github.io/frozenui/demo/searchbar.html">
+                  搜索框
+                </li>
+                <li class="ui-border-t" data-href="tips.html" tppabs="http://frozenui.github.io/frozenui/demo/tips.html">
+                  普通提示条
+                </li>
+                <li class="ui-border-t" data-href="tooltips.html" tppabs="http://frozenui.github.io/frozenui/demo/tooltips.html">
+                  工具提示条
+                </li>
+                <li class="ui-border-t" data-href="newstips.html" tppabs="http://frozenui.github.io/frozenui/demo/newstips.html">
+                  消息提示条
+                </li>
+                <li class="ui-border-t" data-href="table.html" tppabs="http://frozenui.github.io/frozenui/demo/table.html">
+                  表格
+                </li>
+                <li class="ui-border-t" data-href="notice.html" tppabs="http://frozenui.github.io/frozenui/demo/notice.html">
+                  通知
+                </li>
+                <li class="ui-border-t" data-href="progress.html" tppabs="http://frozenui.github.io/frozenui/demo/progress.html">
+                  进度条
+                </li>
+                <li class="ui-border-t" data-href="actionsheet.html" tppabs="http://frozenui.github.io/frozenui/demo/actionsheet.html">
+                  菜单
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+ 
+        </section><!-- /.ui-container-->
+        <script>
+        $('.ui-list li,.ui-tiled li').click(function(){
+            if($(this).data('href')){
+                location.href= $(this).data('href');
+            }
+        });
+        $('.ui-header .ui-btn').click(function(){
+            location.href= 'index.html'/*tpa=http://frozenui.github.io/frozenui/demo/index.html*/;
+        });
+        </script>
+    </body>
+</html>

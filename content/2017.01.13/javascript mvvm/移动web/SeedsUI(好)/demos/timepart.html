@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>timepart</title>
+    <link rel="stylesheet" href="../scripts/lib/seedsui/seedsui.min.css">
+</head>
+
+<body ontouchstart="">
+	<header>
+        <div class="titlebar">
+            <a class="titlebar-button" href="javascript:back()">
+                <i class="icon icon-arrowleft"></i>
+            </a>
+            <h1>时间段控件</h1>
+        </div>
+    </header>
+	<article>
+        <div class="timepart group" id="ID-Timepart">
+            <!-- <div class="timepart-row">
+                <label class="timepart-part" data-timepart-start="07:00" data-timepart-end="07:30">
+                    <span>07:00</span>
+                </label>
+                <label class="timepart-part" data-timepart-start="07:30" data-timepart-end="08:00">
+                    <span>07:30</span>
+                </label>
+                <label class="timepart-part" data-timepart-start="08:00" data-timepart-end="08:30">
+                    <span>08:00</span>
+                </label>
+                <label class="timepart-part" data-timepart-start="08:30" data-timepart-end="9:00">
+                    <span>08:30</span>
+                </label>
+                <label class="timepart-part" data-timepart-start="09:00" data-timepart-end="9:30">
+                    <span>09:00</span>
+                </label>
+                <label class="timepart-part" data-timepart-start="09:30" data-timepart-end="10:00">
+                    <span>10:00</span>
+                </label>
+            </div> -->
+        </div>
+        <a class="radius4 button block margin8" id="submit">预约</a>
+	</article>
+    <script src="../scripts/lib/seedsui/seedsui.min.js"></script>
+    <!--Exmobi能力-->
+    <!--<script src="../scripts/lib/exmobi/exmobi.js"></script>-->
+	<script>
+        var timepart=new Timepart("#ID-Timepart");
+        timepart.disablePartsByRange(0,"8:00");
+        timepart.disablePartsByRange("9:00","10:30");
+        timepart.activePartsByRange("20:00","22:00");
+        var range=timepart.getActiveRange();
+        console.log("选中的时间段："+range);
+		//定义exmobi返回
+		function back() {
+			history.go(-1);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bootstrap Demo</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/all.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead {font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;font-weight: normal;}
+.leftdiv{
+	background-color: #BBD8E9;
+    width: 20%;	
+	float: left;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+.rightdiv{
+	margin-left: 2.5%;
+    width: 77.5%;
+	float: left;
+	background-color: #DCEAF4;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+</style>
+<body style="margin:20px 20px 20px 20px;">
+
+示例 1 : 基本折叠    <br>
+示例 2 : 面板折叠     <br>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">1</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>基本折叠 
+		 </h2>
+	</div>
+</div>
+
+
+
+<style>
+div.well{
+  margin:10px;
+}
+</style>
+<a class="btn btn-info" role="button" data-toggle="collapse" href="#dota" aria-expanded="false" aria-controls="collapseExample">
+  DotA
+</a>
+<button class="btn btn-info" type="button" data-toggle="collapse" data-target="#lol" aria-expanded="false" aria-controls="collapseExample">
+  LOL
+</button>
+<div class="collapse" id="dota">
+  <div class="well">
+《DotA》（Defense of the Ancients），可以译作守护古树、守护遗迹、远古遗迹守卫， 是由暴雪公司出品即时战略游戏《魔兽争霸3》的一款多人即时对战、自定义地图，可支持10个人同时连线游戏，是暴雪公司官方认可的魔兽争霸的RPG地图。
+  </div>
+</div>
+ 
+<div class="collapse" id="lol">
+  <div class="well">
+《英雄联盟》（简称lol）是由美国Riot Games开发，中国大陆地区由腾讯游戏运营的网络游戏。
+  </div>
+</div>
+<div style="height:100px"></div>
+
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">2</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>面板折叠 
+		 </h2>
+	</div>
+</div>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          DOTA
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+       《DotA》（Defense of the Ancients），可以译作守护古树、守护遗迹、远古遗迹守卫， 是由暴雪公司出品即时战略游戏《魔兽争霸3》的一款多人即时对战、自定义地图，可支持10个人同时连线游戏，是暴雪公司官方认可的魔兽争霸的RPG地图。
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          LOL
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+《英雄联盟》（简称lol）是由美国Riot Games开发，中国大陆地区由腾讯游戏运营的网络游戏。
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          风暴英雄
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+       《风暴英雄》 是由暴雪娱乐公司开发的一款运行在Windows和Mac OS上的在线多人竞技PC游戏。
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

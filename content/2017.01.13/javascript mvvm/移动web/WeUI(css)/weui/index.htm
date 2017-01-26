@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WeUI+在线演示</title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="style/weui.css" tppabs="http://weixin.yoby123.cn/weui/style/weui.css"/>
+  <link rel="stylesheet" href="style/weui2.css" tppabs="http://weixin.yoby123.cn/weui/style/weui2.css"/>
+  <link rel="stylesheet" href="style/weui3.css" tppabs="http://weixin.yoby123.cn/weui/style/weui3.css"/>
+      <script src="js/zepto.min.js" tppabs="http://weixin.yoby123.cn/weui/zepto.min.js"></script>
+      <script src="js/php.js" tppabs="http://weixin.yoby123.cn/weui/php.js"></script>
+      
+      <script>
+     
+  $(function(){
+  /* document.querySelector('body').addEventListener('touchmove', function(e) {
+    e.preventDefault();
+})*/
+	  $('.js-category').click(function(){
+			$parent = $(this).parent('li');
+		   if($parent.hasClass('js-show')){
+                        $parent.removeClass('js-show');
+                        $(this).children('i').removeClass('icon-35').addClass('icon-74');
+                    }else{
+                        $parent.siblings().removeClass('js-show');
+                        $parent.addClass('js-show');
+                        $(this).children('i').removeClass('icon-74').addClass('icon-35');
+                         $parent.siblings().find('i').removeClass('icon-35').addClass('icon-74');
+                    }
+		  });
+	  
+	  
+	  });    
+      
+      </script>
+</head>
+
+<body ontouchstart  class="page-bg">
+<div class="page-hd">
+        <h1 class="page-hd-title">
+            WeUI+4.0您的放心选择
+        </h1>
+        <p class="page-hd-desc">WeUI+是Zepto1.2和weui.js,weui0.44/1.1,以及上百个组件开发而成,兼容IOS和Android两大平台,仅适用于微信/手机网站开发,如有任何问题,请在github反馈,其他方式不做回答.</p>
+    </div>
+<div class="page-bd">
+        <ul>
+            <li><div class="weui-flex js-category" >
+                    <div class="weui-flex-item" >1. 表单</div>
+                    <i class="icon icon-74"></i>
+                </div>
+                <div class="page-category js-categoryInner">
+                
+                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+            <a class="weui_cell" href="c/form1.html" tppabs="http://weixin.yoby123.cn/weui/c/form1.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>单选,复选,逻辑开关</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+            <a class="weui_cell" href="c/form2.html" tppabs="http://weixin.yoby123.cn/weui/c/form2.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>输入框,表单验证</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+                        <a class="weui_cell" href="c/form3.html" tppabs="http://weixin.yoby123.cn/weui/c/form3.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>按钮</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+                        <a class="weui_cell" href="c/form4.html" tppabs="http://weixin.yoby123.cn/weui/c/form4.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>picker,省市县,日期,时间</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>            
+                         <a class="weui_cell" href="c/form5.html" tppabs="http://weixin.yoby123.cn/weui/c/form5.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>popup,select</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a> 
+                          <a class="weui_cell" href="c/form6.html" tppabs="http://weixin.yoby123.cn/weui/c/form6.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>加减操作,打分</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>                  
+                          <a class="weui_cell" href="c/form8.html" tppabs="http://weixin.yoby123.cn/weui/c/form8.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>搜索</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a> 
+                                    <a class="weui_cell" href="c/form9.html" tppabs="http://weixin.yoby123.cn/weui/c/form9.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>表单预览</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+                                                <a class="weui_cell" href="c/form10.html" tppabs="http://weixin.yoby123.cn/weui/c/form10.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="weui-reddot">slider滑块</p>
+                </div>
+                <div class="weui_cell_ft">3.6</div>
+            </a>   
+                                  
+        </div>
+                    
+                </div>
+            </li><li>
+                <div class="weui-flex js-category" >
+                    <p class="weui-flex-item" >2. 基础</p>
+                    <i class="icon icon-74"></i>
+                </div>
+                 <div class="page-category js-categoryInner">
+                     <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+            <a class="weui_cell" href="c/base1.html" tppabs="http://weixin.yoby123.cn/weui/c/base1.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>footer</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+            <a class="weui_cell" href="c/base2.html" tppabs="http://weixin.yoby123.cn/weui/c/base2.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>flex</p>
+                </div>
+                <div class="weui_cell_ft">3.2</div>
+            </a>
+             <a class="weui_cell" href="c/base3.html" tppabs="http://weixin.yoby123.cn/weui/c/base3.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>字体大小,颜色,背景,h1-h6</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+              <a class="weui_cell" href="c/base4.html" tppabs="http://weixin.yoby123.cn/weui/c/base4.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>1px边框,圆角矩形</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+              <a class="weui_cell" href="c/base5.html" tppabs="http://weixin.yoby123.cn/weui/c/base5.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p >九宫格</p>
+                </div>
+                <div class="weui_cell_ft">3.3</div>
+            </a> 
+               <a class="weui_cell" href="c/base6.html" tppabs="http://weixin.yoby123.cn/weui/c/base6.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>表格</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a> 
+                          <a class="weui_cell" href="c/base7.html" tppabs="http://weixin.yoby123.cn/weui/c/base7.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>文章格式</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>  
+                           <a class="weui_cell" href="c/base8.html" tppabs="http://weixin.yoby123.cn/weui/c/base8.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>9种常见颜色值,时间线,分割线,加载中</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>             
+                            <a class="weui_cell" href="c/base9.html" tppabs="http://weixin.yoby123.cn/weui/c/base9.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="weui-reddot">导航,动画,小红点,徽标</p>
+                </div>
+                <div class="weui_cell_ft">3.6</div>
+            </a>            
+                            <a class="weui_cell" href="c/base10.html" tppabs="http://weixin.yoby123.cn/weui/c/base10.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>图标</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>  
+                                      <a class="weui_cell" href="c/base11.html" tppabs="http://weixin.yoby123.cn/weui/c/base11.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>标签,图片效果,头像</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>    
+                                               <a class="weui_cell" href="c/base12.html" tppabs="http://weixin.yoby123.cn/weui/c/base12.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>gallery</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>  
+                                                <a class="weui_cell" href="c/base13.html" tppabs="http://weixin.yoby123.cn/weui/c/base13.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p  >仿微信底部菜单</p>
+                </div>
+                <div class="weui_cell_ft">3.3</div>
+            </a>            
+                                                              <a class="weui_cell" href="c/base14.html" tppabs="http://weixin.yoby123.cn/weui/c/base14.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p  class="weui-reddot">视频角标</p>
+                </div>
+                <div class="weui_cell_ft">3.7</div>
+            </a>   
+                                                                        <a class="weui_cell" href="c/base15.html" tppabs="http://weixin.yoby123.cn/weui/c/base15.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p  class="weui-reddot">倒计时</p>
+                </div>
+                <div class="weui_cell_ft">3.7</div>
+            </a>       
+        </div>                   
+                </div>               
+            </li>
+             <li>
+                <div class="weui-flex js-category" >
+                    <p class="weui-flex-item">3. 布局</p>
+                    <i class="icon icon-74"></i>
+                </div>
+                 <div class="page-category js-categoryInner">
+                     <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+            <a class="weui_cell" href="c/cell1.html" tppabs="http://weixin.yoby123.cn/weui/c/cell1.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>列表list</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+            <a class="weui_cell" href="c/cell2.html" tppabs="http://weixin.yoby123.cn/weui/c/cell2.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>面板panel</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+              <a class="weui_cell" href="c/cell3.html" tppabs="http://weixin.yoby123.cn/weui/c/cell3.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>分页,评论</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>          
+             <a class="weui_cell" href="c/cell4.html" tppabs="http://weixin.yoby123.cn/weui/c/cell4.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>上拉下拉</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+            <a class="weui_cell" href="c/cell5.html" tppabs="http://weixin.yoby123.cn/weui/c/cell5.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>微信文章</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>            
+            <a class="weui_cell" href="c/cell6.html" tppabs="http://weixin.yoby123.cn/weui/c/cell6.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>js模板</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a> 
+              <a class="weui_cell" href="c/cell7.html" tppabs="http://weixin.yoby123.cn/weui/c/cell7.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>朋友圈</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>           
+              <a class="weui_cell" href="c/cell8.html" tppabs="http://weixin.yoby123.cn/weui/c/cell8.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>Msg成功,失败,页面空白占用,弹出图片</p>
+                </div>
+                <div class="weui_cell_ft">3.2</div>
+            </a>               
+               <a class="weui_cell" href="c/cell9.html" tppabs="http://weixin.yoby123.cn/weui/c/cell9.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>显示展开,手风琴</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>           
+                                   
+        </div>                   
+                </div>               
+            </li>                     
+            <li>
+                <div class="weui-flex js-category" >
+                    <p class="weui-flex-item " style="position: relative;margin-right: 10px;">4. 组件<span class="weui-badge" style="position: absolute;top: -.4em;">1</span></p>
+                    <i class="icon icon-74"></i>
+                </div>
+                 <div class="page-category js-categoryInner">
+                     <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+            <a class="weui_cell" href="c/js1.html" tppabs="http://weixin.yoby123.cn/weui/c/js1.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>dialog,toptips</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+            <a class="weui_cell" href="c/js2.html" tppabs="http://weixin.yoby123.cn/weui/c/js2.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>actions</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+             <a class="weui_cell" href="c/js3.html" tppabs="http://weixin.yoby123.cn/weui/c/js3.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>上传进度条</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>    
+              <a class="weui_cell" href="c/js4.html" tppabs="http://weixin.yoby123.cn/weui/c/js4.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>navbar</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>            
+             <a class="weui_cell" href="c/js5.html" tppabs="http://weixin.yoby123.cn/weui/c/js5.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>tabbar</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>             
+              <a class="weui_cell" href="c/js6.html" tppabs="http://weixin.yoby123.cn/weui/c/js6.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>轮播swipe</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>  
+              <a class="weui_cell" href="c/js7.html" tppabs="http://weixin.yoby123.cn/weui/c/js7.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>微信分享</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>                               
+               <a class="weui_cell" href="c/js8.html" tppabs="http://weixin.yoby123.cn/weui/c/js8.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>音频播放,视频</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a> 
+               <a class="weui_cell" href="c/js9.html" tppabs="http://weixin.yoby123.cn/weui/c/js9.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>二维码生成,名片二维码,左滑动</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a> 
+                <a class="weui_cell" href="c/js10.html" tppabs="http://weixin.yoby123.cn/weui/c/js10.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>图片上传,压缩</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>           
+      
+      
+                     <a class="weui_cell" href="javascript:if(confirm('http://weixin.yoby123.cn/app/index.php?i=1&c=entry&do=index1&m=we7_demo&wxref=mp.weixin.qq.com  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://weixin.yoby123.cn/app/index.php?i=1&c=entry&do=index1&m=we7_demo&wxref=mp.weixin.qq.com#wechat_redirect'" tppabs="http://weixin.yoby123.cn/app/index.php?i=1&c=entry&do=index1&m=we7_demo&wxref=mp.weixin.qq.com#wechat_redirect">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>JSSDK演示</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>  
+                   <a class="weui_cell" href="c/js11.html" tppabs="http://weixin.yoby123.cn/weui/c/js11.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>lazy懒加载图片</p>
+                </div>
+                <div class="weui_cell_ft">3.1</div>
+            </a>
+                   <a class="weui_cell" href="c/js12.html" tppabs="http://weixin.yoby123.cn/weui/c/js12.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p >摇一摇</p>
+                </div>
+                <div class="weui_cell_ft">3.4</div>
+            </a> 
+                   <a class="weui_cell" href="c/js13.html" tppabs="http://weixin.yoby123.cn/weui/c/js13.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p >vconsole调试工具</p>
+                </div>
+                <div class="weui_cell_ft">3.4</div>
+            </a>			
+                 <a class="weui_cell" href="c/js14.html" tppabs="http://weixin.yoby123.cn/weui/c/js14.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p >fullpage单页</p>
+                </div>
+                <div class="weui_cell_ft">3.5</div>
+            </a>	  
+                <a class="weui_cell" href="c/js15.html" tppabs="http://weixin.yoby123.cn/weui/c/js15.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="weui-reddot">vue2.1.6</p>
+                </div>
+                <div class="weui_cell_ft">4.0</div>
+            </a>	
+                              <a class="weui_cell" href="c/js16.html" tppabs="http://weixin.yoby123.cn/weui/c/js16.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="weui-reddot">jssdk音频播放</p>
+                </div>
+                <div class="weui_cell_ft">4.1</div>
+            </a>	
+                            <a class="weui_cell" href="c/js17.html" tppabs="http://weixin.yoby123.cn/weui/c/js17.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="weui-reddot">音频播放插件</p>
+                </div>
+                <div class="weui_cell_ft">4.1</div>
+            </a>
+        </div>                   
+                </div>               
+            </li>            
+                      
+            <li>
+                <div class="weui-flex js-category" >
+                    <p class="weui-flex-item">5. js函数和css类</p>
+                    <i class="icon icon-74"></i>
+                </div>
+                 <div class="page-category js-categoryInner">
+                     <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+            <a class="weui_cell" href="c/css1.html" tppabs="http://weixin.yoby123.cn/weui/c/css1.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>zepto扩展方法</p>
+                </div>
+                <div class="weui_cell_ft">只包含zepto.min.js之内</div>
+            </a>
+            <a class="weui_cell" href="c/css2.html" tppabs="http://weixin.yoby123.cn/weui/c/css2.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>js/css插件一览表</p>
+                </div>
+                <div class="weui_cell_ft">插件和对应功能</div>
+            </a>
+            <a class="weui_cell" href="c/css3.html" tppabs="http://weixin.yoby123.cn/weui/c/css3.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>js写的php函数一览表</p>
+                </div>
+                <div class="weui_cell_ft">单独可用</div>
+            </a> 
+             <a class="weui_cell" href="c/css4.html" tppabs="http://weixin.yoby123.cn/weui/c/css4.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>css常用类一览表</p>
+                </div>
+                <div class="weui_cell_ft">基础类,单独用</div>
+            </a>
+        </div>                   
+                </div>               
+            </li>
+             <li onclick="location.href='c/help1.html'/*tpa=http://weixin.yoby123.cn/weui/c/help1.html*/">
+                <div class="weui-flex " >
+                    <p class="weui-flex-item">6. 更新日志<span class="weui-badge" style="margin-left: 5px;">New</span></p>
+                    <i class="icon icon-108"></i>
+                </div>
+                           
+            </li>   
+       
+                    <li onclick="location.href='c/help2.html'/*tpa=http://weixin.yoby123.cn/weui/c/help2.html*/">
+                <div class="weui-flex " >
+                    <p class="weui-flex-item">7. 赞助我&nbsp;&nbsp;&nbsp;<i class="icon icon-11 f20 f-white bg-blue"></i>&nbsp;&nbsp;&nbsp;<i class="icon f-white f20 icon-14 bg-green"></i></p>
+                    <i class="icon icon-108"></i>
+                </div>
+                         
+            </li> 
+                                
+        </ul>
+    </div>
+<div class="weui-footer">
+<a target="_blank" class="weui-footer-link" href="javascript:if(confirm('http://github.com/logoove/weui  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://github.com/logoove/weui'" tppabs="http://github.com/logoove/weui"><i class="icon icon-114 f24"></i>去github下载</a>
+<p class="weui-footer-text">Copyright &copy;Yoby</p>
+
+</div>
+</body>
+</html>

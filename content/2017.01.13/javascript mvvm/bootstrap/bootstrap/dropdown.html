@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bootstrap Demo</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/all.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead {font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;font-weight: normal;}
+.leftdiv{
+	background-color: #BBD8E9;
+    width: 20%;	
+	float: left;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+.rightdiv{
+	margin-left: 2.5%;
+    width: 77.5%;
+	float: left;
+	background-color: #DCEAF4;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+</style>
+<body style="margin:20px 20px 20px 20px;">
+
+示例 1 : 下拉菜单    <br> 
+示例 2 : 标题不可点击    <br> 
+示例 3 : 分割线    <br> 
+示例 4 : 禁用项    <br> 
+
+
+
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">1</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>下拉菜单 
+		 </h2>
+	</div>
+</div>
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+      http://192.168.1.189
+      <span class="caret"></span>          
+    </button>
+     
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+      <li>
+         <a href="#">HTML</a>             
+      </li>
+      <li role="presentation">
+         <a href="#">CSS</a>              
+      </li>
+ 
+      <li role="presentation">
+         <a href="#">Javascript</a>           
+      </li>
+      <li role="presentation">
+         <a href="#">AJAX</a>             
+      </li>
+    </ul>
+</div>    
+ 
+<div style="height:100px"></div>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">2</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>标题不可点击 
+		 </h2>
+	</div>
+</div>
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+      http://192.168.1.189
+      <span class="caret"></span>          
+    </button>
+     
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li class="dropdown-header">
+             静态页面(不可点击)
+          </li>
+ 
+      <li>
+         <a href="#">HTML</a>             
+      </li>
+      <li role="presentation">
+         <a href="#">CSS</a>              
+      </li>
+ 
+          <li class="dropdown-header">
+              动态页面(不可点击)
+          </li>
+ 
+      <li role="presentation">
+         <a href="#">Javascript</a>           
+      </li>
+      <li role="presentation">
+         <a href="#">AJAX</a>             
+      </li>
+    </ul>
+</div>    
+ 
+<div style="height:100px"></div>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">3</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>分割线 
+		 </h2>
+	</div>
+</div>
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+      http://192.168.1.189
+      <span class="caret"></span>          
+    </button>
+     
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li class="dropdown-header">
+             静态页面
+          </li>
+ 
+      <li>
+         <a href="#">HTML</a>             
+      </li>
+      <li role="presentation">
+         <a href="#">CSS</a>              
+      </li>
+ 
+          <li role="presentation" class="divider"></li>
+ 
+          <li class="dropdown-header">
+              动态页面
+          </li>
+ 
+      <li role="presentation">
+         <a href="#">Javascript</a>           
+      </li>
+      <li role="presentation">
+         <a href="#">AJAX</a>             
+      </li>
+    </ul>
+</div>    
+ 
+<div style="height:100px"></div>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">4</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>禁用项 
+		 </h2>
+	</div>
+</div>
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+      http://192.168.1.189
+      <span class="caret"></span>          
+    </button>
+     
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li class="dropdown-header">
+             静态页面
+          </li>
+ 
+      <li>
+         <a href="#">HTML</a>             
+      </li>
+      <li role="presentation">
+         <a href="#">CSS</a>              
+      </li>
+ 
+          <li role="presentation" class="divider"></li>
+ 
+          <li class="dropdown-header">
+              动态页面
+          </li>
+ 
+      <li role="presentation">
+         <a href="#">Javascript</a>           
+      </li>
+      <li role="presentation">
+         <a href="#">AJAX</a>             
+      </li>
+<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Bootstrap(开发中)</a></li>
+ 
+    </ul>
+</div>    
+ 
+<div style="height:200px"></div>
+</body>
+</html>

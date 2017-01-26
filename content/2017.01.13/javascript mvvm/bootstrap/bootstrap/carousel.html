@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bootstrap Demo</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/all.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead {font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;font-weight: normal;}
+.leftdiv{
+	background-color: #BBD8E9;
+    width: 20%;	
+	float: left;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+.rightdiv{
+	margin-left: 2.5%;
+    width: 77.5%;
+	float: left;
+	background-color: #DCEAF4;
+	height: 300px;
+	border-radius: 3px 3px 3px 3px;
+}
+</style>
+<body style="margin:20px 20px 20px 20px;">
+
+
+示例 1 : 基本轮播      <br> 
+示例 2 : 带标题的轮播      <br> 
+示例 3 : 设置轮播速度      <br> 
+示例 4 : 控制前后的轮播      <br> 
+
+
+
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">1</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>基本轮播 
+		 </h2>
+	</div>
+</div>
+<style>
+  div.item img{
+    width:100%;
+   }
+  div#carousel-example-generic{
+    width:80%;
+    margin:0 auto;
+  }
+</style>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://how2j.cn/img/site/step/3491.png" >
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3492.png" >
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3493.png" >
+    </div>
+ 
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3494.png" >
+    </div>
+ 
+  </div>
+</div>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">2</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>带标题的轮播 
+		 </h2>
+	</div>
+</div>
+<style>
+  div.item img{
+    width:100%;
+   }
+  div#carousel-example-generic{
+    width:80%;
+    margin:0 auto;
+  }
+</style>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://how2j.cn/img/site/step/3491.png" >
+      <div class="carousel-caption">
+        LOL1
+      </div>
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3492.png" >
+      <div class="carousel-caption">
+        LOL2
+      </div>
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3493.png" >
+      <div class="carousel-caption">
+        LOL3
+      </div>
+    </div>
+ 
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3494.png" >
+      <div class="carousel-caption">
+        LOL4
+      </div>
+    </div>
+ 
+  </div>
+ 
+</div>
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">3</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>设置轮播速度 
+		 </h2>
+	</div>
+</div>
+<style>
+  div.item img{
+    width:100%;
+   }
+  div#carousel-example-generic{
+    width:80%;
+    margin:0 auto;
+  }
+</style>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="1000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://how2j.cn/img/site/step/3491.png" >
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3492.png" >
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3493.png" >
+    </div>
+ 
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3494.png" >
+    </div>
+ 
+  </div>
+</div>
+
+
+<div class="panel panel-info" style="margin-top:13px">
+	<div class="panel-heading " id="step1041">
+		<span class="glyphicon glyphicon-tag basicColor"></span>
+			示例
+		<span style="font-weight: bold">4</span>:
+		<span style="padding-left: 20px"></span>
+		<h2>控制前后的轮播 
+		 </h2>
+	</div>
+</div>
+<style>
+  div.item img{
+    width:100%;
+   }
+  div#carousel-example-generic{
+    width:80%;
+    margin:0 auto;
+  }
+</style>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://how2j.cn/img/site/step/3491.png" >
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3492.png" >
+    </div>
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3493.png" >
+    </div>
+ 
+    <div class="item">
+            <img src="http://how2j.cn/img/site/step/3494.png" >
+    </div>
+ 
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+ 
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+ 
+  </a>
+ 
+</div>
+
+</body>
+</html>
