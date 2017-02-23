@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title></title>
+	 <script src="js/jquery-1.10.2.js"></script> 　
+	 <script src="js/require.js"></script>
+	 <link rel="stylesheet" href="css/ui-dialog.css" />
+	 <link rel="stylesheet" href="css/font-awesome.css" />
+	 <link rel="stylesheet" href="css/bootstrap.css" />
+	 <script src="js/dialog-min.js"></script> 
+  </head>
+  <body>　
+　　 <script type="text/javascript">
+  // var dialog =require('dialog');
+    define(['require', 'dialog'],
+    	function (require) {
+    	var dialog = require('js/src/dialog');
+    });
+    window.dialog = dialog;
+
+    function first() {
+    	var d = dialog({
+    			title: '欢迎',
+    			content: '欢迎使用 artDialog 对话框组件！'
+    		});
+    	d.show();
+    }
+
+    function first2() {
+    	var d = dialog({
+    			title: 'message',
+    			content: '<input autofocus />'
+    		});
+    	d.showModal();
+    }
+
+    function first3() {
+    	var d = dialog({
+    			content: 'Hello World!',
+    			quickClose: true // 点击空白处快速关闭
+    		});
+    	d.show(document.getElementById('quickref-bubble'));
+    }
+
+    function first4() {
+    	var d = dialog({
+    			title: '提示',
+    			content: '按钮回调函数返回 false 则不许关闭',
+    			okValue: '确定',
+    			ok: function () {
+    				this.title('提交中…');
+    				return false;
+    			},
+    			cancelValue: '取消',
+    			cancel: function () {}
+    		});
+    	d.show();
+    }
+
+    function first5() {
+    	var d = dialog({
+    			content: '对话框将在两秒内关闭'
+    		});
+    	d.show();
+    	setTimeout(function () {
+    		d.close().remove();
+    	}, 2000);
+    }
+    function first6() {
+    	var d = dialog({
+    			title: '欢迎',
+    			content: '欢迎使用 artDialog 对话框组件！',
+    			ok: function () {},
+    			statusbar: '<label><input type="checkbox">不再提醒</label>'
+    		});
+    	d.show();
+    }
+    function first7() {
+    	var d = dialog({
+    			title: '欢迎',
+    			content: '欢迎使用 artDialog 对话框组件！',
+    			ok: function () {
+    				var that = this;
+    				this.title('正在提交..');
+    				setTimeout(function () {
+    					that.close().remove();
+    				}, 2000);
+    				return false;
+    			},
+    			cancel: function () {
+    				alert('不许关闭');
+    				return false;
+    			}
+    		});
+    	d.show();
+    }
+    function first8() {
+    	var d = dialog({
+    			title: '欢迎',
+    			content: '欢迎使用 artDialog 对话框组件！',
+    			cancel: false,
+    			ok: function () {}
+    		});
+    	d.show();
+    }
+    function first9() {
+
+    	var d = dialog();
+    	d.content('hello world');
+    	d.show(document.getElementById('api-show'));
+
+    }
+    function first10() {
+    	var d = dialog({
+    			id: 'api-show-dialog',
+    			quickClose: true,
+    			content: '右键菜单'
+    		});
+    	$(document).on('contextmenu', function (event) {
+    		d.show(event);
+    		return d.destroyed;
+    	});
+    }
+    function first11() {
+    	var d = dialog();
+    	d.content('hello world');
+    	d.show();
+
+    }
+
+    function first12() {
+
+    	var elem = document.getElementById('test');
+    	dialog({
+    		content: elem,
+    		id: 'EF893L'
+    	}).show();
+
+    }
+    function first13() {
+    	var d = dialog();
+    	d.title('hello world');
+    	d.show();
+    }
+    function first14() {
+    	dialog({
+    		content: 'hello world'
+    	})
+    	.height(320)
+    	.show();
+    }
+    function first15() {
+    	dialog({
+    		ok: function () {
+    			this
+    			.title('消息')
+    			.content('hello world!')
+    			.width(130);
+    			return false;
+    		}
+    	}).show();
+    }
+    function first16() {
+    	dialog({
+    		okValue: '猛击我',
+    		ok: function () {
+    			this.content('hello world!');
+    			return false;
+    		}
+    	}).show();
+    }
+    function first17() {
+    	dialog({
+    		title: '消息',
+    		ok: function () {},
+    		cancel: function () {
+    			alert('取消');
+    		}
+    	}).show();
+    }
+    function first18() {
+    	dialog({
+    		cancelValue: '取消我',
+    		cancel: function () {
+    			alert('关闭');
+    		}
+    	}).show();
+    }
+    function first19() {
+    	dialog({
+    		title: '提示',
+    		content: '这是一个禁止关闭的对话框，并且没有取消按钮',
+    		cancel: function () {
+    			alert('禁止关闭');
+    			return false;
+    		},
+    		cancelDisplay: false
+    	}).show();
+    }
+    function first20() {
+    	dialog({
+    		button: [{
+    				value: '同意',
+    				callback: function () {
+    					this
+    					.content('你同意了');
+    					return false;
+    				},
+    				autofocus: true
+    			}, {
+    				value: '不同意',
+    				callback: function () {
+    					alert('你不同意')
+    				}
+    			}, {
+    				id: 'button-disabled',
+    				value: '无效按钮',
+    				disabled: true
+    			}, {
+    				value: '关闭我'
+    			}
+    		]
+    	}).show();
+    }
+    function first21() {
+    	dialog({
+    		width: '20em',
+    		height: 100
+    	}).show();
+    }
+    function first22() {
+    	dialog({
+    		skin: 'min-dialog tips'
+    	}).show();
+    }
+    function first23() {
+    	dialog({
+    		content: 'hello world',
+    		padding: 0
+    	}).show();
+    }
+    function first24() {
+    	dialog({
+    		fixed: true,
+    		title: '消息',
+    		content: '请拖动滚动条查看'
+    	}).show();
+    }
+    function first25() {
+    	var d = dialog({
+    			align: 'left',
+    			content: 'Hello World!',
+    			quickClose: true
+    		});
+    	d.show(document.getElementById('option-align'));
+    }
+    function first26() {
+    	var d = dialog({
+    			content: '点击空白处快速关闭',
+    			quickClose: true
+    		});
+    	d.show(document.getElementById('option-quickClose'));
+    }
+    function first27() {
+    	dialog({
+    		zIndex: 87
+    	}).show();
+    }
+    function first28() {
+    	var d = dialog({
+    			content: 'loading..',
+    			onshow: function () {
+    				this.content('dialog ready');
+    			}
+    		});
+    	d.show();
+    }
+    function first29() {
+    	var d = dialog({
+    			onclose: function () {
+    				alert('对话框已经关闭');
+    			},
+    			ok: function () {}
+    		});
+    	d.show();
+    }
+    function first30() {
+    	var d = dialog({
+    			onclose: function () {
+    				alert('对话框已经关闭');
+    			},
+    			onremove: function () {
+    				alert('对话框已经销毁');
+    			},
+    			ok: function () {}
+    		});
+    	d.show();
+    }
+    function first31() {
+    	dialog({
+    		id: 'id-demo',
+    		content: '再次点击运行看看'
+    	}).show();
+    	dialog.get('id-demo').title('8888888888');
+    }
+    function first32() {
+    	var d = dialog({
+    			title: '消息',
+    			content: '<input id="property-returnValue-demo" value="1" />',
+    			ok: function () {
+    				var value = $('#property-returnValue-demo').val();
+    				this.close(value);
+    				this.remove();
+    			}
+    		});
+    	d.addEventListener('close', function () {
+    		alert(this.returnValue);
+    	});
+    	d.show();
+    }
+    function first33() {}
+    function first34() {}
+    function first35() {}
+    function first36() {}
+</script>
+
+  <a href="#" id="test" onclick="first()"
+  style="height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">1.普通对话框</a> 
+  <a href="#" onclick="first2()" style="height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">2.模态对话框</a> 
+  <a href="#" onclick="first3()" style="height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">3.气泡浮层</a> 
+  <a href="#" onclick="first4()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">4.确定与取消按钮</a> 
+  <a href="#" onclick="first5()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">5.控制对话框关闭</a> 
+  <a href="#" onclick="first6()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">6.给对话框左下脚添加复选框</a> 
+  <a href="#" onclick="first7()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">7.阻止对话框关闭</a> 
+  <a href="#" onclick="first8()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">8.不显示关闭按钮</a> 
+  <a href="#" id="api-show" onclick="first9()"
+  style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">9.创建 iframe 内容</a> 
+  <a href="#" id="api-show-dialog" onclick="first10()"
+  style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">10.右键菜单</a> 
+  <a href="#" onclick="first11()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">11.传入字符串</a> 
+  <a href="#" onclick="first12()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">12.元素节点</a> 
+  <a href="#" onclick="first13()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">13.写入对话框标题</a> 
+  <a href="#" onclick="first14()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">14.设置对话框宽度</a> 
+  <a href="#" onclick="first15()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">15.确定按钮回调</a> 
+  <a href="#" onclick="first16()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">16.确定按钮文本</a> 
+  <a href="#" onclick="first17()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">17.取消按钮回调</a> 
+  <a href="#" onclick="first18()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">18.取消按钮文本</a> 
+  <a href="#" onclick="first19()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">19.是否显示取消按钮</a> 
+  <a href="#" onclick="first20()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">20.自定义按钮组</a> 
+  <a href="#" onclick="first21()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">21.对话框宽高</a> 
+  <a href="#" onclick="first22()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">22.对话框皮肤</a> 
+  <a href="#" onclick="first23()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">23.设置消息内容与消息容器的填充边距</a> 
+  <a href="#" onclick="first24()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">24.开启固定定位</a> 
+  <a href="#" id="option-align" onclick="first25()"
+  style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">25.设置对话框与其他元素的对齐方式</a> 
+  <a href="#" id="option-quickClose" onclick="first26()"
+  style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">26.是否点击空白出快速关闭</a> 
+  <a href="#" onclick="first27()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">27.用来改变对话框叠加高度</a> 
+  <a href="#" onclick="first28()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">28.对话框打开的事件</a> 
+  <a href="#" onclick="first29()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">29.对话框关闭后执行的事件</a> 
+  <a href="#" onclick="first30()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">30.对话框销毁事件</a> 
+  <a href="#" onclick="first31()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">31.设定对话框唯一标识id</a> 
+  <a href="#" onclick="first32()" style=" height:2.8rem;font-size:1.2rem; display: flex;justify-content:left;align-items:Center;"
+  class="btn btn-block btn-lg btn-success">32.判断对话框是否被打开</a></body>
+</html>

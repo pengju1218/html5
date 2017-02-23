@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/calendar-blue.css"/>
+
+</head>
+<body>
+    
+    <input type="text" name="time_start" id="J_time_start" class="date" size="12" >
+                    -
+    <input type="text" name="time_end" id="J_time_end" class="date" size="12" >
+    
+    
+<script src="js/calendar.js"></script>
+<script>
+Calendar.setup({
+    inputField : "J_time_start",
+    ifFormat   : "%Y-%m-%d",
+    showsTime  : false,
+    timeFormat : "24"
+});
+Calendar.setup({
+    inputField : "J_time_end",
+    ifFormat   : "%Y-%m-%d",
+    showsTime  : false,
+    timeFormat : "24"
+});
+/*$('.J_preview').preview(); //查看大图
+$('.J_cate_select').cate_select({top_option:lang.all}); //分类联动
+$('.J_tooltip[title]').tooltip({offset:[10, 2], effect:'slide'}).dynamic({bottom:{direction:'down', bounce:true}});*/
+</script>
+
+</body>
+</html>

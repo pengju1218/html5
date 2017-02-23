@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<!-- 声明文档结构类型 -->
+<html lang="zh-cn">
+  <!-- 声明文档文字区域-->
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <!-- 文档的头部区域 -->
+    <meta charset="utf-8" />
+    <!-- 文档的头部区域中元数据区的字符集定义，这里是utf-8，表示国际通用的字符集编码格式 -->
+    <!--[if IE]><![endif]-->
+    <!-- 文档的头部区域的兼容性写法 -->
+    <title>一个不带CSS样式的HTML5布局</title>
+    <!-- 文档的头部区域的标题。这里要注意，这个title的内容对于SEO来说极其重要-->
+    <!--[if IE 9]><meta name=ie content=9><![endif]-->
+    <!-- 文档的头部区域的兼容性写法 -->
+    <!--[if IE 8]><meta name=ie content=8 ><![endif]-->
+    <!-- 文档的头部区域的兼容性写法 -->
+    <meta name="description" content="一个不带CSS样式的HTML5布局" />
+    <!-- 文档的头部区域元数据区关于文档描述的定义 -->
+    <meta name="author" content="秀野堂主" />
+    <!-- 文档的头部区域元数据区关于开发人员姓名的定义 -->
+    <meta name="copyright" content="HTML5研究小组" />
+    <!-- 文档的头部区域元数据区关于版权的定义 -->
+    <link rel="shortcut" icon="" href="favicon.ico" />
+    <!-- 文档的头部区域的兼容性写法 -->
+    <link rel="apple-touch-icon" href="custom_icon.png" />
+    <!-- 文档的头部区域的apple设备的图标的引用 -->
+    <meta name="viewport" content="width=device-width," user-scalable="no" />
+    <!-- 文档的头部区域对于不同接口设备的特殊声明。宽=设备宽，用户不能自行缩放 -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- 文档的头部区域的样式文件引用 -->
+    <!--[if IE]><link rel=stylesheet href=win-ie-all.css><![endif]-->
+    <!-- 文档的头部区域的兼容性样式文件引用写法 -->
+    <!--[if IE 7]><link rel=stylesheet type=text/css href=win-ie7.css><![endif]-->
+    <!-- 文档的头部区域的IE7浏览器的兼容性写法 -->
+    <!--[if lt IE 8]><script src=http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.   js></script><![endif]-->
+    <!-- 文档的头部区域的关于让IE8也兼容HTML5的JavaScript脚本（本书作者希望读者可以少考虑兼容性，  
+     多做技术研究） -->
+    <script language="javascript" type="text/javascript" src="js/WdatePicker.js"></script>
+    <!-- 文档的头部区域的JavaScript脚本文件调用 -->
+  </head>
+  <body>
+    <form>
+      <input id="d11" type="text" onclick="WdatePicker()" />
+      <br />
+      <input style="margin-top:2rem;" id="d12" type="text" />
+      <img onclick="WdatePicker({el:&#39;d12&#39;})" src="js/skin/datePicker.gif" width="16" height="22" align="absmiddle" />
+    
+	<input id="d121" type="text" onfocus="WdatePicker({isShowWeek:true})"/>
+	<input class="Wdate" type="text" id="d15" onFocus="WdatePicker({isShowClear:false,readOnly:true})"/>
+	<input class="Wdate" type="text" id="d16" onfocus="WdatePicker({position:{left:100,top:50}})"/>
+	<input class="Wdate" type="text" id="d17" onfocus="WdatePicker({firstDayOfWeek:1})"/>
+	</form>
+  </body>
+</html>
