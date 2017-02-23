@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="zd.pater.min.css">
+</head>
+<style type="text/css">
+    body {
+        font-size: 1rem;
+    }
+
+    #datepater, #datepater1 {
+        width: 8rem;
+        height: 1.6rem;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        background-color: #fff;
+        border: 0.0625rem solid #ccc;
+        padding: 0.25rem 0.5rem;;
+        display: block;
+        border-radius: 0.25rem;;
+        margin: 1rem auto
+    }
+</style>
+<body>
+
+<div>
+    <input id="datepater" readonly="readonly">
+
+    <p style="text-align: center;font-size:1.4rem;">日期</p>
+
+</div>
+<div>
+    <input id="datepater1" readonly="readonly">
+
+    <p style="text-align: center;font-size:1.4rem;">日期+时间</p>
+
+</div>
+
+</body>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="iscroll.js"></script>
+<script type="text/javascript" src="zdliu.datepater.js"></script>
+<script type="text/javascript">
+    $("#datepater").zdDatePater();
+    $("#datepater1").zdDatePater({timeOf: true});
+
+</script>
+</html>

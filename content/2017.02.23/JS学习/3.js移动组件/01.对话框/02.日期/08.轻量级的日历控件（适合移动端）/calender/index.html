@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/daily.css" />
+		<style>
+			.mui-table-view-cell p{
+				color: black;font-size: 14px;}
+			tr{
+				height: 60px;}
+			td{
+				padding-top: 2px;text-align: center;vertical-align: top;
+				background: #fff;font-size: 12px;color: #000;}
+			.today{
+				background: white;font-weight: bold;
+				border-radius:20px;color: #007aff;}
+			.focus{
+				background: #007aff;font-weight: bold;
+				border-radius:20px;color: #fff;}
+		</style>
+	</head>
+
+	<body>
+		<!--
+        	作者：IMeng
+        	时间：2014-11-04
+        	描述：中间DIV，默认距离顶部50px
+        -->
+		<div id="calendar" style="">
+			<div id="cal_header" style="position:relative; height: 40px; width: 100%; background:#fff;">
+				<span id="preM" style="border:none; position:absolute;left: 5%;top: 8px;">&lt;</span>
+				<span id="thisYM" style="line-height:40px; color:#000; width: 100%; height: 40px; display: block; text-align: center;"></span>
+				<span id="nextM" style="border:none; position:absolute;left: 90%; top: 8px;">&gt;</span>
+			</div>
+			<!--
+                	作者：2024764140@qq.com
+                	时间：2014-11-04
+                	描述：请不要任意更改td中span的ID。如果需要更改，请一起将daily.js[onReady的监听修改]
+                -->
+			<div id="cal_week">
+				<table style="width: 100%; ">
+					<tr>
+						<td>
+							<span style="display: block; margin-bottom: 5px;">日</span>
+							<span id="week0" style="padding:3px; font-size: 16px;"></span>
+						</td>
+
+						<td>
+							<span style="display: block; margin-bottom: 5px;">一</span>
+							<span id="week1" style="padding:3px; font-size: 16px;"></span>
+						</td>
+
+						<td>
+							<span style="display: block; margin-bottom: 5px;">二</span>
+							<span id="week2" style="padding:3px; font-size: 16px;"></span>
+						</td>
+
+						<td>
+							<span style="display: block; margin-bottom: 5px;">三</span>
+							<span id="week3" style="padding:3px; font-size: 16px;"></span>
+						</td>
+
+						<td>
+							<span style="display: block; margin-bottom: 5px;">四</span>
+							<span id="week4" style="padding:3px; font-size: 16px;"></span>
+						</td>
+
+						<td>
+							<span style="display: block; margin-bottom: 5px;">五</span>
+							<span id="week5" style="padding:3px; font-size: 16px;"></span>
+						</td>
+
+						<td>
+							<span style="display: block; margin-bottom: 5px;">六</span>
+							<span id="week6" style="padding:3px; font-size: 16px;"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="calender.js"></script>
+	</body>
+
+</html>

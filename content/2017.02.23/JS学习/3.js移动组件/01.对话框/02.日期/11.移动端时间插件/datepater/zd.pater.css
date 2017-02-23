@@ -1,0 +1,292 @@
+a, a:hover {
+    text-decoration: none
+}
+
+div {
+    margin: 0;
+    padding: 0
+}
+
+input {
+    border: 0
+}
+
+mark {
+    background: #ff0
+}
+
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+body, button, input, select, textarea {
+    font-family: arial, 'microsoft yahei', sans-serif !important
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%
+}
+
+address, cite, dfn, em, var {
+    font-style: normal
+}
+
+code, kbd, pre, samp {
+    font-family: courier new, courier, monospace
+}
+
+ol, ul {
+    list-style: none
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom;
+    position: absolute
+}
+
+legend {
+    color: #000
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+html {
+    font-size: 100% !important
+}
+
+body {
+    font-size: 1em !important;
+}
+
+input {
+    outline: 0
+}
+
+@media screen and (min-width: 30em) {
+    body {
+        font-size: 1.5em !important
+    }
+
+    html {
+        font-size: 150% !important
+    }
+}
+
+@media screen and (min-width: 45em) {
+    body {
+        font-size: 2em !important
+    }
+
+    html {
+        font-size: 200% !important
+    }
+}
+
+@media screen and (min-width: 60em) {
+    body {
+        font-size: 2.5em !important
+    }
+
+    html {
+        font-size: 250% !important
+    }
+}
+
+@media screen and (min-width: 75em) {
+    body {
+        font-size: 3em !important
+    }
+
+    html {
+        font-size: 300% !important
+    }
+}
+
+.dg_date {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.dg_data_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(Opacity=50);
+    left: 0;
+    z-index: 0;
+}
+
+.dg_date_body {
+    position: absolute;
+    width: 86%;
+    top: 50%;
+    background-color: #fff;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    left: 7%;
+    height: 13rem;
+    margin-top: -6.5rem;
+    z-index: 2;
+}
+
+.dg_date .dg_time_body {
+    height: 20.2rem;
+    margin-top: -10.1rem;
+}
+
+.dg_date_title {
+    height: 2.5rem;
+    background: #2FC15D;
+    text-align: center;
+    color: #fff;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.375rem 0.375rem 0 0;
+    font-family: 'microsoft yahei';
+}
+
+.dg_date_scroll {
+    background: #F8F8F8;
+    width: 94%;
+    margin: 0.5rem 3%;
+    border: 0.0625rem solid #cbcbcb;
+    border-radius: 0.25rem;
+    height: 6.75rem;
+    text-align: center;
+    position: relative;
+    line-height: 2.5rem;
+}
+
+.dg_date_scroll .dg_date_bg {
+    left: 2%;
+    width: 96%;
+    height: 1.6rem;
+    position: absolute;
+    top: 50%;
+    background: #FFEEC4;
+    margin-top: -0.8725rem;
+    z-index: 0;
+}
+
+.dg_date_scroll .dg_date_ul {
+    width: 33.3333%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.dg_date_scroll .dg_time_ul {
+    width: 40%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.dg_date_scroll #dateHourWrapper {
+    margin-left: 10%;
+}
+.dg_date_scroll .dg_date_ul ul{width:96%;margin:0 auto;}
+.dg_date_scroll  li {
+    height: 2.25rem;
+    line-height: 2.25rem;
+    font-size: 0.875rem;
+    color: #898989;
+}
+
+.dg_date_btn {
+    position: relative;
+    height: 2.5rem;
+}
+
+.dg_date_sure {
+    border-radius: 0.25rem;
+    width: 26%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    background-color: #2FC15D;
+    left: 1.25rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dg_date_empty {
+    border-radius: 0.25rem;
+    width: 26%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    background-color: #4672E2;
+    left: 37%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dg_date_cancel {
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    float: left;
+    top: 0;
+    width: 26%;
+    height: 2rem;
+    line-height: 2rem;
+    list-style-type: none;
+    font-size: 1rem;
+    position: absolute;
+    background-color: #dcdddd;
+    right: 1.25rem;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
