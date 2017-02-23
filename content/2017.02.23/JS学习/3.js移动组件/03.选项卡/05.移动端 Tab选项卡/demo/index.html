@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>移动端Tab选项卡</title>
+    <!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+            $(".tab a").click(function() {
+                $(this).addClass('curr').siblings().removeClass('curr');
+                var index = $(this).index();
+                number = index;
+                $('.nav .content li').hide();
+                $('.nav .content li:eq(' + index + ')').show();
+            });
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div, input, textarea, button, a {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+     ul, li, ol{
+            list-style: none;
+        }
+        a {
+            color: #323232;
+            outline-style: none;
+            text-decoration: none;
+        }
+        .border-b {
+            position: relative;
+        }
+        .border-b:after {
+            top: auto;
+            bottom: 0;
+        }
+        .border-t:before, .border-b:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: #ddd;
+            right: 0;
+            height: 1px;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+        .nav {
+            background-color: #fff;
+            text-align: center;
+        }
+        .nav .tab {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .tab a {
+            float: left;
+            width: 49%;
+            height: 2.56rem;
+            line-height:2.56rem;
+            display: inline-block;
+            border-right: 1px solid #e1e1e1;
+        }
+        .tab a:last-child {
+            border-right: 0;
+        }
+        .tab .curr {
+            border-bottom: 2px solid #fc7831;
+            color: #fc7831;
+        }
+        .content ul li {
+            display: none;
+            padding: 3%;
+            width: 94%;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="tab border-b">
+        <a href="javascript:;" class="curr">商品介绍</a>
+        <a href="javascript:;">评价(99)</a>
+    </div>
+    <div class="content">
+        <ul>
+            <li style="display: block">商品介绍</li>
+            <li>评价</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

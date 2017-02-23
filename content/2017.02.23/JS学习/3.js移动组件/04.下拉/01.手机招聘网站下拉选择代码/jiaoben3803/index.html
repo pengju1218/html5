@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" /> 
+<meta http-equiv="cache-control" content="no-cache" /> 
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" /> 
+<meta content="telephone=yes" name="format-detection" /> 
+<meta content="email=no" name="format-detection" /> 
+<title>jQuery手机招聘网站下拉选择代码 - 站长素材</title>  
+<link href="css/base.css" rel="stylesheet" /> 
+</head> 
+<body> 
+
+<section class="job-module"> 
+	<dl class="retrie"> 
+		<dt>
+			<a id="area" href="javascript:;">分类 </a>
+			<a id="wage" href="javascript:;">月薪</a>
+		</dt> 
+		<dd class="area"> 
+			<ul class="slide downlist"> 
+				<li><a href="#">不限</a></li> 
+				<li><a href="#">销售</a></li> 
+				<li><a href="#">会计</a></li> 
+				<li><a href="#">文员</a></li> 
+				<li><a href="#">程序</a></li> 
+				<li><a href="#">金融</a></li> 
+			</ul> 
+		</dd> 
+		<dd class="wage"> 
+			<ul class="slide downlist"> 
+				<li><a href="#">不限</a></li> 
+				<li><a href="#">1500</a></li> 
+				<li><a href="#">2000</a></li> 
+				<li><a href="#">2500</a></li> 
+				<li><a href="#">3000</a></li> 
+				<li><a href="#">4000</a></li> 
+				<li><a href="#">5000</a></li> 
+				<li><a href="#">6000</a></li> 
+				<li><a href="#">7000</a></li> 
+				<li><a href="#">8000</a></li> 
+				<li><a href="#">9000</a></li> 
+				<li><a href="#">10000以上</a></li> 
+			</ul> 
+		</dd> 
+	</dl> 
+</section> 
+
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript">
+$(function(){ 
+	$('.retrie dt a').click(function(){
+		var $t=$(this);
+		if($t.hasClass('up')){
+			$(".retrie dt a").removeClass('up');
+			$('.downlist').hide();
+			$('.mask').hide();
+		}else{
+			$(".retrie dt a").removeClass('up');
+			$('.downlist').hide();
+			$t.addClass('up');
+			$('.downlist').eq($(".retrie dt a").index($(this)[0])).show();
+			$('.mask').show();
+		}
+	});
+	$(".area ul li a:contains('"+$('#area').text()+"')").addClass('selected');
+	$(".wage ul li a:contains('"+$('#wage').text()+"')").addClass('selected');
+});
+</script> 
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
